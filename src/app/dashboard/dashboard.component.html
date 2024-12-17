@@ -1,0 +1,183 @@
+<div *ngIf="!isAuthenticated" class="login-container">
+  <div class="cameralogdiv">
+  <p *ngIf="!userLocation || !cameraStream">Initializing camera and location...</p>
+  
+  <!-- Toggle Buttons for Camera and Location Containers -->
+  <div class="toggle-buttons">
+    <button (click)="toggleCameraVisibility()" class="toggle-btn">
+      {{ cameraVisible ? 'Hide' : 'Show' }} Camera
+    </button>
+    <button (click)="toggleLocationVisibility()" class="toggle-btn">
+      {{ locationVisible ? 'Hide' : 'Show' }} Location
+    </button>
+  </div>
+
+  <!-- Camera feed -->
+  <div *ngIf="cameraVisible" class="camera-container">
+    <h3>Live Camera Feed</h3>
+    <video id="live-camera" autoplay playsinline muted class="camera-feed"></video>
+  </div>
+
+  <!-- Location display -->
+  <div *ngIf="locationVisible && userLocation" class="location-container">
+    <h3>Your Location:</h3>
+    <p>Latitude: {{ userLocation.latitude }}</p>
+    <p>Longitude: {{ userLocation.longitude }}</p>
+    <a [href]="'https://www.google.com/maps?q=' + userLocation.latitude + ',' + userLocation.longitude" target="_blank">
+      View on Google Maps
+    </a>
+  </div>
+</div>
+<div class="logindivlo">
+  <h1>Login</h1>
+  <form (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" type="email" [(ngModel)]="loginEmail" name="email" required />
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input id="password" type="password" [(ngModel)]="loginPassword" name="password" required />
+    </div>
+    <button type="submit" class="login-btn" [disabled]="!cameraStream || !userLocation">Login</button>
+  </form>
+
+
+    <div class="go-website-container">
+      <button class="go-website-btn" (click)="navigateToWebsite()">Go to Website</button>
+    </div>
+
+  </div>
+</div>
+  <div *ngIf="isAuthenticated">
+    <div class="dashboard-container" id="game-dashboard">
+      <h1 id="dashboard-title">Game Dashboard</h1>
+  
+      <!-- Add Game Modal -->
+      <div *ngIf="addMode" class="add-modal" id="add-game-modal">
+        <h2 id="add-modal-title">Add New Game</h2>
+        <label for="new-game-name">
+          Name:
+          <input id="new-game-name" [(ngModel)]="newGame.Name" />
+        </label>
+  
+        <label for="new-game-price">
+          Price:
+          <input id="new-game-price" type="number" [(ngModel)]="newGame.price" />
+        </label>
+  
+        <label for="new-button-a-text">
+          Button A Text:
+          <input id="new-button-a-text" [(ngModel)]="newGame.buttonA" />
+        </label>
+  
+        <label for="new-button-b-text">
+          Button B Text:
+          <input id="new-button-b-text" [(ngModel)]="newGame.buttonB" />
+        </label>
+  
+        <label for="new-cover-img-url">
+          Cover Image URL:
+          <input id="new-cover-img-url" [(ngModel)]="newGame.coverimg" />
+        </label>
+  
+        <div class="modal-buttons" id="modal-buttons">
+          <button (click)="saveNewGame()" id="save-new-game-btn">Save</button>
+          <button (click)="cancelAdd()" id="cancel-add-btn">Cancel</button>
+        </div>
+      </div>
+  
+      <!-- Add Game Button -->
+      <div class="add-game-btn-container">
+        <button (click)="openAddGameModal()" id="add-game-btn">Add New Game</button>
+      </div>
+  
+      <!-- Edit Game Modal -->
+      <div *ngIf="editMode && gameToEdit" class="edit-modal" id="edit-game-modal">
+        <h2 id="edit-modal-title">Edit Game</h2>
+        <label for="game-name">
+          Name:
+          <input id="game-name" [(ngModel)]="gameToEdit.Name" />
+        </label>
+  
+        <label for="game-price">
+          Price:
+          <input id="game-price" type="number" [(ngModel)]="gameToEdit.price" />
+        </label>
+  
+        <label for="button-a-text">
+          Button A Text:
+          <input id="button-a-text" [(ngModel)]="gameToEdit.buttonA" />
+        </label>
+  
+        <label for="button-b-text">
+          Button B Text:
+          <input id="button-b-text" [(ngModel)]="gameToEdit.buttonB" />
+        </label>
+  
+        <label for="cover-img-url">
+          Cover Image URL:
+          <input id="cover-img-url" [(ngModel)]="gameToEdit.coverimg" />
+        </label>
+  
+        <div class="modal-buttons" id="modal-buttons">
+          <button (click)="saveGame()" id="save-game-btn">Save</button>
+          <button (click)="cancelEdit()" id="cancel-edit-btn">Cancel</button>
+        </div>
+      </div>
+  
+      <!-- Games Table -->
+      <div class="games-table" id="games-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let game of games">
+              <td>{{ game.id }}</td> <!-- Display the Game ID -->
+              <td>
+                <img [src]="game.coverimg" alt="{{ game.Name }}" class="game-image" />
+              </td>
+              <td>{{ game.Name }}</td>
+              <td>${{ game.price }}</td>
+              <td class="game-actions">
+                <button (click)="editGame(game)" class="edit-btn">Edit</button>
+                <button (click)="confirmDelete(game.id)" class="delete-btn">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- Logout Button -->
+<div *ngIf="isAuthenticated" class="logout-btn-container">
+    <button (click)="logout()" id="logout-btn">Logout</button>
+  </div>
+
+
+  <div *ngIf="isAuthenticated && recentlyDeleted.length > 0" class="recently-deleted-container" id="recently-deleted-card">
+    <h2 id="recently-deleted-title">Recently Deleted Items</h2>
+    <div class="recently-deleted-list">
+      <div *ngFor="let deletedGame of recentlyDeleted" class="deleted-game-item" id="deleted-game-{{deletedGame.id}}">
+        <div class="deleted-game-card">
+          <img [src]="deletedGame.coverimg" alt="{{deletedGame.Name}}" class="deleted-game-image" />
+          <div class="deleted-game-details">
+            <h3 class="deleted-game-name">{{ deletedGame.Name }}</h3>
+            <p class="deleted-game-price">Price: ${{ deletedGame.price }}</p>
+            <button (click)="restoreGame(deletedGame)" class="restore-btn">Restore</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  

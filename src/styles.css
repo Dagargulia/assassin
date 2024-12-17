@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+button {
+    cursor: pointer;
+}
+/* Language Switcher Container */
+/* Language Switcher Container */
+/* Language Switcher Container */
+/* Language Switcher Container */
+/* Language Switcher Container */
+/* Language Switcher Container */
+.language-switcher {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Icon Styling - Much Smaller Initial Size */
+  .custom-translate-label {
+    font-size: 12px; /* Small initial size */
+    cursor: pointer;
+    color: #007bff;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #007bff;
+  }
+  
+  /* Icon Hover Effect */
+  .custom-translate-label:hover {
+    color: #fff;
+    background-color: #007bff;
+    transform: scale(1.05);
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Google Translate Dropdown */
+  .translate-dropdown {
+    display: none;
+    background: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 6px 8px;
+    margin-top: 6px;
+    animation: fadeIn 0.3s ease;
+    min-width: 140px;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  /* Dropdown Items Styling */
+  #google_translate_element select {
+    font-size: 12px;
+    padding: 4px 8px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown Hover Effect */
+  #google_translate_element select:hover {
+    border-color: #007bff;
+    background-color: #f1f1f1;
+  }
+  
+  /* Dropdown Focus Effect */
+  #google_translate_element select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 4px rgba(0, 85, 179, 0.2);
+  }
+  
+  /* Animation for Dropdown */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hide Google Branding */
+  .goog-logo-link,
+  
+  .goog-te-gadget img {
+    display: none !important;
+  }
+  
+
+  
+  /* RESPONSIVITY */
+  
+  /* For Mobile Devices (max-width: 576px) */
+  @media (max-width: 576px) {
+    .language-switcher {
+      top: 10px;             /* Move closer to the top */
+      right: 5px;            /* Align further right */
+      padding: 4px;          /* Smaller padding */
+    }
+  
+    .custom-translate-label {
+      font-size: 10px;       /* Even smaller size for mobile */
+      padding: 3px;          /* Reduce padding */
+    }
+  
+    .translate-dropdown {
+      min-width: 100px;      /* Smaller dropdown width */
+      padding: 4px 6px;
+    }
+  
+    #google_translate_element select {
+      font-size: 10px;
+      padding: 3px 6px;
+    }
+  }
+  
+  /* For Tablet Devices (max-width: 768px) */
+  @media (max-width: 768px) {
+    .language-switcher {
+      top: 40px;             /* Adjust top position */
+      right: 8px;            /* Adjust right alignment */
+      padding: 5px;
+    }
+  
+    .custom-translate-label {
+      font-size: 11px;       /* Slightly larger than mobile */
+      padding: 3px 4px;
+    }
+  
+    .translate-dropdown {
+      min-width: 120px;
+    }
+  }
+  
+  /* For Small Laptops (max-width: 992px) */
+  @media (max-width: 992px) {
+    .language-switcher {
+      top: 60px;
+      right: 10px;
+    }
+  
+    .custom-translate-label {
+      font-size: 12px;       /* Retain default size */
+      padding: 4px;
+    }
+  
+    .translate-dropdown {
+      min-width: 130px;
+    }
+  }
+  
+  /* For Larger Screens */
+  @media (min-width: 1200px) {
+    .language-switcher {
+      top: 80px;
+      right: 10px;
+    }
+  
+    .custom-translate-label {
+      font-size: 12px;
+      padding: 4px;
+    }
+  
+    .translate-dropdown {
+      min-width: 140px;
+    }
+  }
+  

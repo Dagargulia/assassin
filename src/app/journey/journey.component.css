@@ -1,0 +1,695 @@
+
+/* Overall Section Styling */
+.popular {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.popular h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    font-family: 'Lora', serif;
+    color: #2f2f2f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Popular List Container Styling */
+.popularList {
+    display: inline-block;
+    width: 280px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px; /* For 3D effect */
+    transform-style: preserve-3d; /* Keeps the 3D effect intact */
+}
+
+.popularList:hover {
+    transform: translateY(-10px) rotateY(5deg); /* 3D effect on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.popularList img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+    transform-origin: center center;
+}
+
+.popularList:hover img {
+    transform: scale(1.1);
+}
+
+/* Title Styling */
+.popularList h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.popularList:hover h3 {
+    color: #007bff; /* Hover color for title */
+}
+
+/* Description Text Styling */
+.popularList p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.popularList:hover p {
+    color: #555;
+}
+
+/* Hover Effects for Text */
+.popularList p strong {
+    font-weight: bold;
+}
+
+.popularList p em {
+    font-style: italic;
+    color: #d35400; /* Accent color for specific text */
+}
+
+/* 3D Hover Effect for Popular List */
+.popularList:hover {
+    transform: translateY(-15px) rotateY(8deg) scale(1.05);
+}
+
+/* Card Hover Animation */
+.popularList:hover .popularList h3 {
+    color: #ff6347; /* Change text color on hover */
+}
+
+.popularList p:hover {
+    color: #555; /* Hover effect for the text */
+}
+
+/* Transition for smoothness */
+.popularList h3, .popularList p, .popularList img {
+    transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .popularList {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .popularList h3 {
+        font-size: 1.2rem;
+    }
+
+    .popularList img {
+        height: 180px;
+    }
+}
+
+/* Keyframe Animations for Added Effects */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adding Fade-in Animation */
+.popularList {
+    animation: fadeIn 1s ease-out forwards;
+}
+/* Overall body styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+/* Banner Section Styling */
+.banner {
+    background: url('https://media.licdn.com/dms/image/C5612AQG_6v4mbpqb9g/article-cover_image-shrink_720_1280/0/1612190983535?e=2147483647&v=beta&t=lcXjclKSEJUxDbxXT5bDWHAVKr-VNVr0Z6fldNnX7s4') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Gradient Overlay for Depth */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Adds a dark overlay */
+    z-index: -1;
+}
+
+/* Banner Content Styling */
+.banner-content {
+    z-index: 2;
+    transform: perspective(500px) rotateX(0deg) scale(1);
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+/* Banner Heading Styling */
+.banner h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    animation: fadeIn 1s ease-out;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Banner Subtext Styling */
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Order Ticket Button Styling */
+.order-ticket-btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 18px 40px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    letter-spacing: 2px;
+}
+
+.order-ticket-btn:hover {
+    background-color: #e55347;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.order-ticket-btn:active {
+    transform: scale(1.05) translateY(3px);
+}
+
+/* Keyframe for Fade In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe for Slide-In Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px) rotateX(30deg);
+    }
+    100% {
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+    }
+
+    .order-ticket-btn {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+    }
+}
+/* Global Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+/* Map Section Styling */
+.my {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Map Image Styling */
+.my_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85; /* Slight opacity for overlay effect */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect on Map Image */
+.my_img:hover {
+    opacity: 1; /* Full opacity on hover for focus effect */
+}
+
+/* Overlay Styling on Map */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text Overlay on Map */
+.map-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Heading Styling */
+.map-overlay h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+    color: black;
+}
+
+/* Paragraph Styling */
+.map-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4);
+    color: black;
+}
+
+/* Explore Button Styling */
+.explore-btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid transparent;
+    letter-spacing: 2px;
+}
+
+.explore-btn:hover {
+    background-color: #e55347;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Keyframe for Fade In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .map-overlay h2 {
+        font-size: 2.5rem;
+    }
+
+    .map-overlay p {
+        font-size: 1rem;
+    }
+
+    .explore-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: white; /* White background */
+    color: #000; /* Black text */
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .header {
+    margin: 30px 0;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  /* Map Section */
+  .map-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+  }
+  
+  .map-image {
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .map-text {
+    text-align: left;
+  }
+  
+  .map-text h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .map-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Hotels Section */
+  .hotels-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+    flex-direction: row-reverse; /* Switch the order */
+  }
+  
+  .hotels-image {
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  .hotels-text {
+    text-align: left;
+  }
+  
+  .hotels-text h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .hotels-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Register Section */
+  .register-section {
+    margin: 40px 0;
+  }
+  
+  .register-button {
+    background-color: #5a00f0;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .register-button:hover {
+    background-color: #4000b5;
+  }
+  
+
+
+  /* heeeeeeeeeeeeeeeeeeeeaaaaaaaaaaaaaaaaaaaaddddddddddddddddddddddddddeeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrr */
+  /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header Styling */
+.headermine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #00000000; /* Deep Blue for a sophisticated look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle depth */
+    background-image: url(https://as1.ftcdn.net/v2/jpg/01/75/79/40/1000_F_175794085_iMiUMpYhvrwmyzp4rsrK3xi582pqv32T.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Logo Styling */
+.logomine {
+    display: flex;
+    align-items: center;
+}
+
+.logo_img {
+    max-height: 60px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 50%;
+}
+
+/* Logo Hover Effect */
+.logo_img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); /* Lighten logo on hover */
+}
+
+/* Navigation Styling */
+.navmine ul {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+}
+
+.navmine ul li {
+    font-size: 18px;
+    color: #fffcfc; /* Light gray for text */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects for Navigation Items */
+.navmine ul li:hover {
+    color: #ffffff;
+    transform: translateY(-4px); /* Slight lift effect */
+}
+
+/* Underline Effect on Hover */
+.navmine ul li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e62222; /* Matching underline color */
+    transition: width 0.3s ease;
+}
+
+.navmine ul li:hover::after {
+    width: 100%;
+}
+
+/* Header Hover Effect */
+.headermine:hover {
+    background-color: #000000; /* Lighter shade on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for more impact */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .headermine {
+        padding: 15px 25px;
+    }
+
+    .navmine ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navmine ul li {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+}
+/* General Styles */
+.headermine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .logomine img {
+    height: 50px;
+  }
+  
+  .navmine {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navmine ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navmine li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: flex;
+    }
+  
+    .navmine {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #ffffff;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .navmine.open {
+      display: flex;
+      transform: translateY(0);
+    }
+  
+    .navmine ul {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .navmine li a {
+      font-size: 1.5rem;
+    }
+  }
+  

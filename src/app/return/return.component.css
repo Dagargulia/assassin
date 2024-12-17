@@ -1,0 +1,809 @@
+header.firts_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Background color */
+    padding: 10px 20px; /* Padding for spacing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  }
+  
+  .firts_header .moon,
+  .firts_header .cart {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .firts_header .logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .firts_header .first_header_img {
+    max-height: 60px; /* Limits logo size */
+    width: auto;
+  }
+  
+  .moon,
+  .cart {
+    cursor: pointer; /* Indicates clickable items */
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .moon:hover,
+  .cart:hover {
+    color: #d00000; /* Change color on hover */
+  }
+  
+/* Basic styling for the navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-list li {
+    margin: 0 15px;
+    position: relative;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    transition: color 0.3s;
+  }
+  
+  .nav-list a:hover {
+    color: red;
+  }
+  
+  /* Dropdown styling */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+  }
+  
+  .dropdown-content li {
+    margin: 0;
+  }
+  
+  .dropdown-content a {
+    padding: 10px 15px;
+    display: block;
+    color: black;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .faded-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    margin: 20px 0; /* Adjust spacing above and below the line */
+  }
+  .second_header {
+    margin-bottom: 20px;
+  }
+
+
+  .cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover and active effects */
+  .cart:hover {
+    background-color: rgba(255, 99, 71, 0.8); /* Tomato background on hover */
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(255, 99, 71, 0.5);
+  }
+  
+  .cart:active {
+    transform: scale(0.95);
+    background-color: rgba(211, 47, 47, 0.8); /* Darker red for active state */
+  }
+  
+  /* Style for the SVG */
+  .daga {
+    width: 40px; /* Adjust size */
+    height: 40px;
+    fill: none; /* Ensures no fill by default */
+    stroke: #ffffff; /* Default stroke color */
+    transition: stroke 0.3s ease;
+  }
+  
+  /* SVG hover effect */
+  
+  /* General Styles for the Basket Container */
+  .basket_for_clothes {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ffffff;  /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    cursor: pointer;  /* Add a pointer cursor to indicate interactivity */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect for the Basket */
+  .basket_for_clothes:hover {
+    transform: translateY(-4px);  /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
+  }
+  
+  /* Styling for the SVG inside the basket */
+  .lkmj {
+    width: 60px;  /* Adjust size */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect on the SVG to scale it up */
+  .basket_for_clothes:hover .lkmj {
+    transform: scale(1.1);  /* Slight zoom effect on hover */
+  }
+  
+  /* Styling for paths and circle inside SVG */
+  .cls-3 {
+    fill: none;
+    stroke: #000000;  /* Default color for paths */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    transition: stroke 0.3s ease, fill 0.3s ease;
+  }
+  
+  .basket_for_clothes:hover .cls-3 {
+    stroke: #ff6600;  /* Change stroke color to orange on hover */
+  }
+  
+  /* Circle styling inside SVG */
+  .lkmj circle {
+    fill: #000000;  /* Default fill for the circle */
+    transition: fill 0.3s ease;
+  }
+  
+  .basket_for_clothes:hover .lkmj circle {
+    fill: #ff0000;  /* Change circle fill to orange on hover */
+  }
+  .moon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure the button is above other elements */
+  }
+  
+  .theme-toggle-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .theme-toggle-button:hover {
+    background-color: #444;
+    transform: scale(1.1);
+  }
+  
+  .theme-toggle-button:focus {
+    outline: none;
+  }
+  
+  #moonIcon, #sunIcon {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Hide the sun icon in dark mode and show moon */
+  #sunIcon {
+    display: none;
+  }
+  
+  .theme-toggle-button.dark-mode #sunIcon {
+    display: block;
+  }
+  
+  .theme-toggle-button.dark-mode #moonIcon {
+    display: none;
+  }
+  /* DAAAAAAAAAAAAAAAAAARRRRRRRRRRRRRRKKKKKKKKKKKKKKKKKKK */
+  .dark-mode body {
+    background-color: #000000; /* Dark background */
+    color: #E0E0E0; /* Light text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Header */
+  .dark-mode header.firts_header {
+    background-color: #000000; /* Dark header */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1); /* Light shadow for depth */
+  }
+  
+  .dark-mode header.firts_header .moon,
+  .dark-mode header.firts_header .cart {
+    color: #E0E0E0; /* Light icons */
+  }
+  
+  .dark-mode header.firts_header .moon:hover,
+  .dark-mode header.firts_header .cart:hover {
+    color: #f20000; /* Highlight color on hover */
+  }
+  
+  /* Navbar */
+  .dark-mode .navbar {
+    background-color: #000000; /* Dark navbar */
+  }
+  
+  .dark-mode .nav-list a {
+    color: #E0E0E0; /* Light text color */
+  }
+  
+  .dark-mode .nav-list a:hover {
+    color: #de0000; /* Highlight color on hover */
+  }
+  
+  /* Dropdown */
+  .dark-mode .dropdown-content {
+    background-color: #000000; /* Dark dropdown */
+  }
+  
+  .dark-mode .dropdown-content a {
+    color: #E0E0E0; /* Light text color */
+  }
+  
+  .dark-mode .dropdown-content a:hover {
+    background-color: #de0000; /* Hover background color */
+    color: white;
+  }
+  .dark-mode .first_header_img {
+    content: url('https://assassinscreedmerch.com/wp-content/uploads/2023/08/Logo-2.png');
+  }
+  .dark-mode .theme-toggle-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .dark-mode .theme-toggle-button:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+  }
+  
+  /* Style for the cart container */
+  .cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover and active effects */
+  .cart:hover {
+    background-color: rgba(255, 99, 71, 0.8); /* Tomato background on hover */
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(255, 99, 71, 0.5);
+  }
+  
+  .cart:active {
+    transform: scale(0.95);
+    background-color: rgba(211, 47, 47, 0.8); /* Darker red for active state */
+  }
+  .basket_for_clothes {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ffffff;  /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    cursor: pointer;  /* Add a pointer cursor to indicate interactivity */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect for the Basket */
+  .basket_for_clothes:hover {
+    transform: translateY(-4px);  /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
+  }
+  
+  /* Styling for the SVG inside the basket */
+  .lkmj {
+    width: 60px;  /* Adjust size */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect on the SVG to scale it up */
+  .basket_for_clothes:hover .lkmj {
+    transform: scale(1.1);  /* Slight zoom effect on hover */
+  }
+  
+  /* Styling for paths and circle inside SVG */
+  .cls-3 {
+    fill: none;
+    stroke: #000000;  /* Default color for paths */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    transition: stroke 0.3s ease, fill 0.3s ease;
+  }
+  
+  .basket_for_clothes:hover .cls-3 {
+    stroke: #ff6600;  /* Change stroke color to orange on hover */
+  }
+  
+  /* Circle styling inside SVG */
+  .lkmj circle {
+    fill: #000000;  /* Default fill for the circle */
+    transition: fill 0.3s ease;
+  }
+  
+  .basket_for_clothes:hover .lkmj circle {
+    fill: #ff0000;  /* Change circle fill to orange on hover */
+  }
+  .policy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .policy-container h1 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .policy-section {
+    margin-bottom: 30px;
+  }
+  
+  .policy-section h2 {
+    font-size: 1.5rem;
+    color: #ff0000;
+    margin-bottom: 10px;
+  }
+  
+  .policy-section p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 10px;
+    line-height: 1.8;
+  }
+  
+  .policy-section p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .policy-container a {
+    color: #ff0000;
+    text-decoration: none;
+  }
+  
+  .policy-container a:hover {
+    text-decoration: underline;
+  }
+  .dark-mode   .policy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #000000;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  .dark-mode .policy-section p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.8;
+  }
+  .footer {
+    background-color: #c8102e; /* Red background */
+    color: white; /* Text color */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer a {
+    color: white; /* Links in white */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #f79e1b; /* Hover effect for links */
+  }
+  
+  /* Footer Layout */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 10px;
+  }
+  
+  .footer-column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column li {
+    margin-bottom: 8px;
+  }
+  
+  /* Social and Payment Icons */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons svg:hover {
+    transform: scale(1.2);
+  }
+  
+  .payment-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .payment-icons svg {
+    width: 48px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .payment-icons svg:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Copyright Section */
+  .footer-bottom p {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #e0e0e0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-column {
+      margin-bottom: 20px;
+    }
+  
+    .payment-icons {
+      flex-wrap: wrap;
+    }
+  }
+  /* Base styles defined above */
+
+/* Responsive styles for smallest to widest screens */
+
+/* For extra-small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .firts_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .firts_header .logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .first_header_img {
+    max-height: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-list li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .cart,
+  .theme-toggle-button {
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+  }
+
+  .basket_for_clothes {
+    padding: 8px;
+    border-radius: 8px;
+    transition: padding 0.3s ease;
+    width: 100%;
+  }
+
+  .lkmj {
+    width: 40px;
+  }
+}
+
+/* For small screens (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .firts_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .first_header_img {
+    max-height: 50px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .nav-list li {
+    margin: 0 8px;
+    font-size: 1rem;
+  }
+
+  .cart,
+  .theme-toggle-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .basket_for_clothes {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .lkmj {
+    width: 50px;
+  }
+}
+
+/* For medium screens (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .firts_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    width: 100%;
+  }
+
+  .first_header_img {
+    max-height: 60px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .nav-list li {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+
+  .cart,
+  .theme-toggle-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .basket_for_clothes {
+    padding: 12px;
+    border-radius: 12px;
+    width: auto;
+  }
+
+  .lkmj {
+    width: 55px;
+  }
+}
+
+/* For large screens (1025px to 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .firts_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    width: 100%;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 1.1rem;
+  }
+
+  .nav-list li {
+    margin: 0 15px;
+  }
+
+  .cart,
+  .theme-toggle-button {
+    width: 65px;
+    height: 65px;
+  }
+
+  .basket_for_clothes {
+    padding: 15px;
+    border-radius: 15px;
+    width: auto;
+  }
+
+  .lkmj {
+    width: 65px;
+  }
+}
+
+/* For extra-large screens (1441px and above) */
+@media (min-width: 1441px) {
+  .firts_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    width: 100%;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.2rem;
+  }
+
+  .nav-list li {
+    margin: 0 20px;
+  }
+
+  .cart,
+  .theme-toggle-button {
+    width: 70px;
+    height: 70px;
+  }
+
+  .basket_for_clothes {
+    padding: 18px;
+    border-radius: 18px;
+    width: auto;
+  }
+
+  .lkmj {
+    width: 70px;
+  }
+}
+
+/* Smooth transitions for resizing */
+.firts_header,
+.first_header_img,
+.nav-list,
+.cart,
+.theme-toggle-button,
+.basket_for_clothes,
+.lkmj {
+  transition: all 0.3s ease;
+}

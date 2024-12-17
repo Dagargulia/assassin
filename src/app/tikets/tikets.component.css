@@ -1,0 +1,1566 @@
+/* General Styles */
+.headermine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .logomine img {
+    height: 50px;
+  }
+  
+  .navmine {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navmine ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navmine li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    box-shadow: white;
+  }
+  
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: flex;
+    }
+  
+    .navmine {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #ffffff;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .navmine.open {
+      display: flex;
+      transform: translateY(0);
+    }
+  
+    .navmine ul {
+      flex-direction: column;
+      gap: 2rem;
+      
+    }
+  
+    .navmine li a {
+      font-size: 1.5rem;
+    }
+  }
+  
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #ff0d0d;
+}
+
+/* Header Styling */
+.headermine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #00000000; /* Deep Blue for a sophisticated look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle depth */
+    background-image: url(https://as1.ftcdn.net/v2/jpg/01/75/79/40/1000_F_175794085_iMiUMpYhvrwmyzp4rsrK3xi582pqv32T.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Logo Styling */
+.logomine {
+    display: flex;
+    align-items: center;
+}
+
+.logo_img {
+    max-height: 60px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 50%;
+}
+
+/* Logo Hover Effect */
+.logo_img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); /* Lighten logo on hover */
+}
+
+/* Navigation Styling */
+.navmine ul {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+    
+}
+
+.navmine ul li {
+    font-size: 18px;
+    color: #ffffff; /* Light gray for text */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects for Navigation Items */
+.navmine ul li:hover {
+    color: #ffffff;
+    transform: translateY(-4px); /* Slight lift effect */
+}
+
+/* Underline Effect on Hover */
+.navmine ul li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e62222; /* Matching underline color */
+    transition: width 0.3s ease;
+}
+
+.navmine ul li:hover::after {
+    width: 100%;
+}
+
+/* Header Hover Effect */
+.headermine:hover {
+    background-color: #000000; /* Lighter shade on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for more impact */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .headermine {
+        padding: 15px 25px;
+    }
+
+    .navmine ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navmine ul li {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Section Styles */
+  .ticket-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .ticket-list h2 {
+    font-size: 36px;
+    color: #4b4b4b;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .ticket {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+  }
+  
+  .ticket:hover {
+    transform: rotateY(10deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ticket img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .ticket img:hover {
+    transform: scale(1.05);
+  }
+  
+  .ticket h3 {
+    font-size: 28px;
+    color: #333;
+    margin: 20px 0 10px;
+    text-transform: capitalize;
+  }
+  
+  .ticket p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .ticket p strong {
+    color: #333;
+  }
+  
+  /* Transport Options Styles */
+  .transport-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  select:hover {
+    border-color: #3498db;
+  }
+  
+  select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  /* Price Display */
+  .ticket p strong {
+    color: #3498db;
+    font-weight: 700;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ticket-list {
+      padding: 30px 15px;
+    }
+  
+    .ticket {
+      width: 100%;
+    }
+  
+    .ticket h3 {
+      font-size: 24px;
+    }
+  
+    .ticket p {
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  }
+
+ h2 {
+    grid-column: span 2; /* Ensure the heading spans across the grid */
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;  /* Center the text horizontally */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease;
+  }
+  
+
+
+
+
+
+
+
+/* Basic Styling for Modal Section */
+.fuppout {
+    position: relative;
+  }
+  
+  .modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darkened background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .modal-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    margin-top: 100px;
+  }
+  
+  .modal p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .modal .close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .modal .close-button:hover {
+    color: #ff6b6b; /* Red color on hover */
+  }
+  
+  /* Form Input Styling */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  input[type="number"], input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #007bff; /* Focus border color */
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  /* Animation for Modal Fade In */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 600px) {
+    .modal-content {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .modal .close-button {
+      top: 5px;
+      right: 10px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 12px;
+    }
+  
+    input[type="number"], input[type="text"] {
+      width: 100%;
+    }
+  }
+  
+  /* Responsive Styles for Header */
+@media (max-width: 768px) {
+  .headermine {
+    padding: 15px 25px;
+  }
+
+  .navmine ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navmine ul li {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .navmine {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navmine.open {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .navmine ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .navmine li a {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile Responsiveness for Ticket Section */
+@media (max-width: 768px) {
+  .ticket-list {
+    padding: 30px 15px;
+  }
+
+  .ticket {
+    width: 100%;
+  }
+
+  .ticket h3 {
+    font-size: 24px;
+  }
+
+  .ticket p {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* Responsive Design for Modal */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .modal .close-button {
+    top: 5px;
+    right: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  input[type="number"], input[type="text"] {
+    width: 100%;
+  }
+}
+.date-time-picker {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 30px auto;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.date-time-picker label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.date-time-picker label:hover {
+  color: #f4c542;
+}
+
+.date-time-picker input[type="date"],
+.date-time-picker input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.date-time-picker input[type="date"]:focus,
+.date-time-picker input[type="time"]:focus {
+  outline: none;
+  border-color: #f4c542;
+  box-shadow: 0 0 8px rgba(244, 197, 66, 0.5);
+  transform: scale(1.02);
+}
+
+.date-time-picker input:hover {
+  border-color: #f4c542;
+}
+
+.date-time-picker p {
+  font-size: 1rem;
+  margin-top: 15px;
+  color: #555;
+  font-style: italic;
+  animation: slideIn 0.8s ease;
+}
+
+.date-time-picker p strong {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Hover Effects for Pseudo-elements */
+.date-time-picker input[type="date"]:hover::after,
+.date-time-picker input[type="time"]:hover::after {
+  content: attr(type);
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  background: #f4c542;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .date-time-picker {
+      padding: 15px;
+  }
+
+  .date-time-picker label {
+      font-size: 1rem;
+  }
+
+  .date-time-picker input[type="date"],
+  .date-time-picker input[type="time"] {
+      font-size: 0.9rem;
+  }
+
+  .date-time-picker p {
+      font-size: 0.9rem;
+  }
+}
+/* Overall Section Styling */
+.welcome-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #000000;
+  background-size: cover; /* Ensure the background covers the entire section */
+  position: relative;
+  background-attachment: fixed; /* Keeps background image fixed during scroll */
+}
+
+/* Welcome Text Styling */
+.welcome-text {
+  max-width: 50%;
+  color: #ffffff;
+}
+
+.welcome-text h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-out;
+}
+
+.welcome-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #fffefe;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 1.1em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #218838;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+/* 3D Spinning Circular Image Styling */
+.welcome-image {
+  position: relative;
+  width: 50%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* Adding depth to 3D effect */
+}
+
+.welcome-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* Circular Image */
+  object-fit: cover; /* Ensures the image covers the circular area */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 1s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  animation: spin 10s infinite linear, float 3s ease-in-out infinite;
+}
+
+/* Image Spin Animation */
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Floating Effect on Image */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Text Slide-In Animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .welcome-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .welcome-image {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+/* Overall container for the search bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Search input styling */
+.search-input {
+  width: 300px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Focused state of the input with 3D effects */
+.search-input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Hover effect */
+.search-input:hover {
+  border-color: #2196f3;
+  background-color: #e3f2fd;
+  box-shadow: 0 8px 12px rgba(33, 150, 243, 0.3);
+  transform: scale(1.05) translateY(-2px);
+}
+
+/* Placeholder styling */
+.search-input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Adding a subtle 3D effect when the input is focused */
+.search-bar .search-input {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.search-input:focus {
+  transform: rotateX(5deg) rotateY(5deg);
+}
+
+/* Smooth transition effect */
+.search-input, .search-input:focus {
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+/* 3D Animation and Style */
+.alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50px) rotateY(180deg);
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  animation: alertShow 0.5s forwards, alertHide 0.5s 4.5s forwards;
+}
+
+@keyframes alertShow {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50px) rotateY(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) rotateY(0deg);
+  }
+}
+
+@keyframes alertHide {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) rotateY(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50px) rotateY(180deg);
+  }
+}
+/* Base map styling */
+#map {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('https://cdn.openart.ai/stable_diffusion/b39db5bec4f46a5629daf4e84022fde8bde174c1_2000x2000.webp') no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Styling for city markers */
+.marker {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: red;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 0.3s ease;
+}
+
+.marker:hover {
+  transform: scale(1.5) translateZ(10px); /* Adds depth effect */
+  background: darkred;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds hover glow */
+}
+
+/* Tooltip styling */
+.tooltip {
+  position: absolute;
+  background: #fff;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, 20%);
+  display: none;
+  z-index: 10;
+  text-align: left;
+  width: 250px;
+  pointer-events: none;
+  opacity: 0; /* Initial hidden state */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Fade and slide in animation */
+}
+
+.tooltip img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.tooltip h3 {
+  font-size: 16px;
+  margin: 0 0 4px;
+  color: #000;
+}
+
+.tooltip p {
+  font-size: 14px;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+/* Show tooltip with animation when marker is hovered */
+.marker:hover + .tooltip {
+  display: block;
+  opacity: 1; /* Fade in */
+  transform: translate(-50%, 0); /* Slide up for a floating effect */
+}
+
+/* Add 3D floating effect for markers and tooltips */
+.marker {
+  perspective: 1000px; /* Enables 3D perspective */
+}
+
+.tooltip {
+  transform-origin: center bottom;
+  animation: tooltipFloat 2s infinite alternate ease-in-out; /* Subtle floating effect */
+}
+
+@keyframes tooltipFloat {
+  from {
+    transform: translate(-50%, 0) scale(1);
+  }
+  to {
+    transform: translate(-50%, -10px) scale(1.05); /* Slight float and scale effect */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #map {
+    height: 400px;
+  }
+
+  .marker {
+    width: 10px;
+    height: 10px;
+  }
+
+  .tooltip {
+    font-size: 12px;
+    width: 200px;
+  }
+
+  .tooltip h3 {
+    font-size: 14px;
+  }
+
+  .tooltip p {
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+/* General responsiveness for larger screens */
+@media (min-width: 1200px) {
+  #map {
+    height: 100vh;
+  }
+
+  .marker {
+    width: 20px;
+    height: 20px;
+  }
+
+  .tooltip {
+    font-size: 16px;
+    width: 300px;
+  }
+}
+
+/* Desktop and tablets in landscape mode */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #map {
+    height: 90vh;
+  }
+
+  .marker {
+    width: 18px;
+    height: 18px;
+  }
+
+  .tooltip {
+    font-size: 14px;
+    width: 280px;
+  }
+}
+
+/* Tablets in portrait mode */
+@media (min-width: 768px) and (max-width: 991px) {
+  #map {
+    height: 80vh;
+  }
+
+  .marker {
+    width: 15px;
+    height: 15px;
+  }
+
+  .tooltip {
+    font-size: 14px;
+    width: 240px;
+  }
+}
+
+/* Small devices (smartphones) */
+@media (max-width: 767px) {
+  #map {
+    height: 60vh;
+  }
+
+  .marker {
+    width: 10px;
+    height: 10px;
+  }
+
+  .tooltip {
+    font-size: 12px;
+    width: 200px;
+  }
+
+  .tooltip h3 {
+    font-size: 14px;
+  }
+
+  .tooltip p {
+    font-size: 12px;
+  }
+}
+
+/* Extra small devices (small smartphones) */
+@media (max-width: 480px) {
+  #map {
+    height: 50vh;
+  }
+
+  .marker {
+    width: 8px;
+    height: 8px;
+  }
+
+  .tooltip {
+    font-size: 11px;
+    width: 180px;
+  }
+
+  .tooltip h3 {
+    font-size: 13px;
+  }
+
+  .tooltip p {
+    font-size: 11px;
+  }
+}
+
+/* Extremely narrow devices (watch-like screens or very narrow) */
+@media (max-width: 320px) {
+  #map {
+    height: 40vh;
+  }
+
+  .marker {
+    width: 6px;
+    height: 6px;
+  }
+
+  .tooltip {
+    font-size: 10px;
+    width: 150px;
+  }
+
+  .tooltip h3 {
+    font-size: 12px;
+  }
+
+  .tooltip p {
+    font-size: 10px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .ticket-list {
+      grid-template-columns: 1fr;
+  }
+  .modal-content {
+      padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .navmine ul li {
+      font-size: 14px;
+      padding: 8px 15px;
+  }
+}
+/* Style for the tile_text container */
+.tile_text {
+  background-color: #000000; /* Dark background color to match the Assassin's Creed theme */
+  padding: 20px;
+   /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 100%; /* Make sure it takes up the full width */
+  max-width: 100%; /* Limit max width */
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Center text */
+}
+
+/* Style for the title */
+.title {
+  font-size: 2rem; /* Larger font size for prominence */
+  color: #fff; /* White text color */
+  text-transform: uppercase; /* Capitalize the title */
+  letter-spacing: 2px; /* Spacing between letters */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add a subtle shadow for better readability */
+  margin: 0; /* Remove default margin */
+}
+h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.highlight {
+  color: #ff4567;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #ffffff, #f3f4f6);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
+  animation: rotateGlow 10s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotateGlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-images .image-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: perspective(800px) rotateY(15deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.hero-images .image-wrapper:hover {
+  transform: perspective(800px) rotateY(0deg) scale(1.1);
+}
+
+.hero-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  max-width: 500px;
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.hero-text ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-text ul li {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tour Packages Section */
+.packages {
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.packages .section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.package-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.package-cards .card {
+  width: 300px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: perspective(500px) rotateX(0deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.package-cards .card:hover {
+  transform: perspective(500px) rotateX(-5deg) translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.package-cards img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.package-cards h4 {
+  font-size: 1.2rem;
+  padding: 15px;
+  color: #333;
+}
+
+.package-cards p {
+  font-size: 1rem;
+  padding: 0 15px 15px;
+  color: #777;
+  text-align: center;
+}
+
+/* Testimonial Section */
+.testimonials {
+  background: linear-gradient(to right, #f6f6f6, #ffffff);
+  padding: 50px 20px;
+}
+
+.testimonial-slider {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  max-width: 300px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.testimonial h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.testimonial span {
+  color: #999;
+}
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  padding: 50px 20px;
+  background: #333;
+  color: #fff;
+  position: relative;
+}
+
+.footer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 80%);
+  z-index: 0;
+  animation: pulseGlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.footer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button {
+  background: #ff4567;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(255, 69, 103, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .package-cards .card {
+    width: 90%;
+  }
+
+  .testimonial-slider {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.swal2-wide-popup {
+  max-width: 600px;
+}

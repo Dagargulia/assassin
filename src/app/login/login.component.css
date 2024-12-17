@@ -1,0 +1,294 @@
+/* General Page Styles */
+section {
+    margin: 0;
+    padding: 0;
+    background: url("https://images6.alphacoders.com/131/1318199.jpg") no-repeat center center fixed;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.sLink {
+    cursor: pointer;
+}
+
+.topSide {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #757575;
+    position: relative;
+    z-index: 1;
+}
+
+.footWidth {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.footLay {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0 0 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.footLay li {
+    list-style: none;
+}
+
+.footList {
+    width: 25%;
+    margin-top: 10px;
+}
+
+.footLink {
+    text-decoration: none;
+    color: #757575;
+    font-size: 0.8rem;
+}
+
+.footLink:hover {
+    text-decoration: underline;
+}
+
+/* Login Card Styles */
+.login-card {
+    margin: 0 auto;
+    width: 450px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 30px 70px 143px 70px;
+}
+
+.login-card h1 {
+    color: white;
+    padding-bottom: 10px;
+}
+
+/* Input Fields */
+.userInput {
+    margin-bottom: 20px;
+}
+
+.userInput input {
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border-color: white;
+    outline: transparent;
+    text-indent: 18px;
+}
+
+.userInput input::-webkit-input-placeholder {
+    font-size: 1rem;
+    color: #999;
+}
+
+.userInput input::-moz-placeholder {
+    font-size: 1rem;
+    color: #999;
+    text-indent: 40px;
+}
+
+/* Button Styles */
+.btn-login {
+    margin-top: 20px;
+    width: 100%;
+    padding: 13px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+/* Remember Me Section */
+.remMe {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.cText {
+    color: #b3b3b3;
+}
+
+.cLink {
+    color: #737373;
+}
+
+/* Sign Up Link */
+.sLink {
+    color: white;
+    text-decoration: none;
+}
+
+.sLink:hover {
+    text-decoration: underline;
+}
+
+.fb {
+    color: #3b5998;
+    margin-right: 6px;
+    font-size: 20px;
+}
+
+.fb {
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+
+.login2 {
+    margin: 50px 0 15px 0;
+    vertical-align: middle;
+    color: #8c8c8c;
+}
+
+.signUp {
+    margin-bottom: 10px;
+    color: #8c8c8c;
+}
+
+/* Google reCAPTCHA Link */
+.google {
+    font-size: 0.8rem;
+    color: #8c8c8c;
+}
+
+.google a {
+    text-decoration: none;
+}
+
+.google a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 740px) {
+    body {
+        background: black;
+    }
+
+    .login-card {
+        padding: 0 10px 0 10px;
+        width: 100%;
+    }
+
+    .parent-login {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .footer {
+        border-top: 1px solid #737373;
+    }
+
+    .topSide {
+        padding-bottom: 93px;
+    }
+
+    .footList {
+        width: 33%;
+    }
+}
+
+/* Custom "Sign In" Button Styles */
+.btn-login {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+/* Custom Alert Overlay */
+.custom-signin-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Custom Alert Box */
+.alert-content {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+.alert-content p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Close Button */
+.close-btn {
+    margin-top: 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.error-message {
+    color: red;
+}

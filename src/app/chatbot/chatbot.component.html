@@ -1,0 +1,45 @@
+<div class="chatbot-container">
+  <!-- Chatbot Header -->
+  <div class="chatbot-header">
+    <h2>AC Chatbot Assistant</h2>
+    <button class="chatbot-close-btn" (click)="toggleChatbot()"></button>
+  </div>
+
+  <!-- Chatbot Conversation Window -->
+  <div class="chatbot-messages">
+    <div *ngFor="let entry of conversation" class="chatbot-message">
+      <div class="user-message">{{ entry.user }}</div>
+      <div class="bot-response">{{ entry.bot }}</div>
+    </div>
+    <!-- Show bot typing indicator -->
+    <div *ngIf="isBotTyping" class="typing-indicator">AssassinBot is typing...</div>
+  </div>
+
+  <!-- Suggested Questions List -->
+  <!-- Suggested Questions List -->
+<div class="chatbot-questions">
+  <button class="dsa" (click)="toggleQuestionsList()">Toggle Suggested Questions</button>
+  <h4 *ngIf="isQuestionsListVisible">Try asking:</h4>
+  <ul *ngIf="isQuestionsListVisible">
+    <li *ngFor="let question of questionsList" (click)="chatbotMessage = question; askChatbot()">
+      {{ question }}
+    </li>
+  </ul>
+</div>
+
+
+  <!-- User Input and Controls -->
+  <div class="chatbot-controls">
+    <div class="chatbot-input">
+      <input
+        type="text"
+        placeholder="Ask a question..."
+        [(ngModel)]="chatbotMessage"
+        (keyup.enter)="askChatbot()"
+      />
+      <button (click)="askChatbot()">Send</button>
+    </div>
+    <!-- Clear Chat Button -->
+    <button class="clear-chat-btn" (click)="clearChat()">Clear Chat</button>
+  </div>
+</div>

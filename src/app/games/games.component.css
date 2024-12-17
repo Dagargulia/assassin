@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mhj {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+}
+/* General Styles for the Search Bar */
+.search-bar {
+  width: 100%; /* Take full width of the parent */
+  max-width: 600px; /* Limit the maximum width */
+  padding: 12px 16px; /* Add inner padding for a comfortable typing experience */
+  margin: 16px auto; /* Center the search bar and add space around it */
+  font-size: 1rem; /* Set a readable font size */
+  border: 2px solid #00adef; /* Light blue border for a modern look */
+  border-radius: 25px; /* Rounded corners for a smooth appearance */
+  outline: none; /* Remove the default outline */
+  background-color: #1a1a1a; /* Dark background for contrast */
+  color: #fff; /* White text color */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Placeholder Styling */
+.search-bar::placeholder {
+  color: #ccc; /* Light gray placeholder text */
+  opacity: 0.7; /* Slightly transparent */
+  font-style: italic; /* Italic style for distinction */
+}
+
+/* Focus State Styling */
+.search-bar:focus {
+  border-color: #00eaff; /* Brighter blue border on focus */
+  background-color: #0f0f0f; /* Slightly darker background on focus */
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.5); /* Soft blue glow effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .search-bar {
+    font-size: 0.9rem; /* Slightly smaller font on tablets */
+    padding: 10px 14px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    font-size: 0.85rem; /* Even smaller font on mobile devices */
+    padding: 8px 12px; /* Reduce padding */
+  }
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Centering Container */
+.questionari {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  padding: 20px 0;
+}
+
+/* General Styling */
+h1, .topph {
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.topph {
+  font-size: 38px;
+  margin-top: 40px;
+}
+
+.topp_p {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.33);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.top {
+  background-image: url(https://cdn.mos.cms.futurecdn.net/umZ77QZznAZ5FdZG94mGRe.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+}
+
+.lod {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://wallpapercave.com/wp/wp2937273.jpg);
+}
+
+/* FAQ Section */
+.faq-section {
+  width: 95%;
+  max-width: 1200px;
+  background-color: #1a1a1a;
+  border: 2px solid #444;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  margin: 20px;
+}
+
+.faq-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #e8e8e8;
+  border-bottom: 2px solid #444;
+  padding-bottom: 10px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00adef;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.faq-answer {
+  font-size: 18px;
+  margin-top: 5px;
+  display: none;
+  color: #cfcfcf;
+  padding: 10px;
+  background-color: #222;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover .faq-question {
+  color: #00eaff;
+}
+
+.faq-item:hover .faq-answer {
+  display: block;
+}
+
+/* Grid for Games List */
+.mockapi_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  width: 100%;
+  background-image: url(https://images.hdqwalls.com/wallpapers/assassins-creed-syndicate-logo-dark-4k-ax.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+}
+.mockapi_list_games {
+  position: relative;
+  background-image: url(https://images.hdqwalls.com/wallpapers/assassins-creed-syndicate-logo-dark-4k-ax.jpg);
+  border: 1px solid white;
+  border-radius: 22px;
+  box-shadow: 0 0 5px 5px #fff;
+  overflow: hidden;
+  width: 280px;
+}
+
+.mockapi_list_games {
+  background-color: rgba(0, 0, 0, 0.44);
+  border: 1px solid white;
+  border-radius: 22px;
+  box-shadow: 0 0 5px 5px #fff;
+  overflow: hidden;
+  width: 280px;
+}
+
+.mockapi_list_img {
+  width: 100%;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+
+.mockapi_list_games_btn_A, .mockapi_list_games_btn_B {
+  text-align: center;
+  color: #fff;
+  border: 3px solid white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.mockapi_list_games_btn_B:hover, .mockapi_list_games_btn_A:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.btns {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 24px;
+  }
+  
+  .faq-question {
+    font-size: 18px;
+  }
+  
+  .faq-answer {
+    font-size: 16px;
+  }
+  
+  .topph {
+    font-size: 32px;
+  }
+
+  .topp_p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-title {
+    font-size: 22px;
+  }
+  
+  .faq-question {
+    font-size: 16px;
+  }
+  
+  .faq-answer {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .topph {
+    font-size: 28px;
+  }
+}
+/* Style for the checkbox container */
+.checkbox-container {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+  appearance: none; /* Remove default checkbox style */
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+  background-color: #4caf50; /* Color when checked */
+}
+
+.checkbox-container input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.checkbox-container input[type="checkbox"]:checked::before {
+  transform: translateX(20px); /* Move circle to the right when checked */
+}
+
+.checkbox-container label {
+  font-size: 14px;
+  color: #ffffff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Button for adding selected games */
+.add-selected-btn {
+  margin-top: 20px;
+  text-align: center;
+  
+}
+.lkjhg {
+  background-color: #000;
+}
+
+.add-selected-btn button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-selected-btn button:hover {
+  background-color: #45a049;
+}
+
+
+
+
+.price {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: rgba(237, 1, 1, 0.9);
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}

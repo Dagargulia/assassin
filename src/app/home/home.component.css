@@ -1,0 +1,742 @@
+.slid {
+  background-image: url(https://cms-assets.xboxservices.com/assets/f7/75/f7759371-ffd8-429c-b858-e3e3242fa547.jpg?n=343859994_GLP-Page-Hero-1084_1920x1080.jpg);
+  width: 100%;
+  height: 120vh;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+}
+
+.slid_one {
+  color: white;
+  margin-top: 20px;
+}
+
+.slid_in {
+  margin: 140px;
+}
+
+.slid_btn {
+  transition: all .5s ease;
+  color: #fff;
+  border: 3px solid white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.slid_btn:hover {
+  color: #000000;
+  background-color: #fff;
+}
+
+.slid_uder {
+  color: white;
+  margin: 10px;
+}
+
+h3 {
+  color: white;
+  margin: 10px;
+}
+
+.slid_three {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+  margin-left: 140px;
+}
+
+.slid_three_one {
+  border: 1px solid white;
+  border-radius: 22px;
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/15/328/936/fan-art-assassins-creed-dark-background-ezio-wallpaper-preview.jpg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.jklois {
+  background-color: #000000;
+}
+.mik {
+  color: #00000000;
+}
+.slid_three_one:hover {
+  box-shadow: 0 0 5px 5px #fff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+h4 {
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.animus {
+  background-image: url(https://images.hdqwalls.com/wallpapers/assassins-creed-syndicate-logo-dark-4k-ax.jpg);
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.animus_txt {
+  color: white;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.animus_btn {
+  transition: all .5s ease;
+  color: #fff;
+  border: 3px solid white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.animus_btn:hover {
+  color: #000000;
+  background-color: #fff;
+}
+
+.animus_card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin: 80px;
+}
+
+.animus_img {
+  width: 100%;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+
+.animusbet {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.animus_card_one {
+  border: 1px solid white;
+  border-radius: 22px;
+  box-shadow: 0 0 5px 5px #fff;
+}
+
+.animus_foot {
+  transition: all .5s ease;
+  color: #fff;
+  border: 3px solid white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+}
+
+.animus_foot:hover {
+  color: #000000;
+  background-color: #fff;
+}
+
+.foot_anim {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.news_card {
+  background-image: url(https://images.hdqwalls.com/wallpapers/assassins-creed-syndicate-logo-dark-4k-ax.jpg);
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.news_date {
+  color: white;
+  margin-top: 20px;
+  margin: 20px;
+}
+
+.news_text {
+  color: white;
+  margin-top: 10px;
+  font-size: 22px;
+  margin: 20px;
+}
+
+.news_btn {
+  transition: all .5s ease;
+  color: #fff;
+  border: 3px solid white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin: 20px;
+}
+
+.news_btn:hover {
+  color: #000000;
+  background-color: #fff;
+}
+
+.news_card_one {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin: 80px;
+}
+
+.news_img {
+  width: 100%;
+}
+
+.news_foot {
+  background-color: rgb(36, 35, 35);
+  color: #fff;
+  width: 180px;
+  margin-top: 10px;
+  margin: 20px;
+}
+
+.news_card_one_row {
+  background-color: rgb(53, 51, 51);
+  border-radius: 22px;
+}
+
+.news_text_two {
+  color: white;
+  margin: 20px;
+}
+
+.news_last {
+  transition: all .5s ease;
+  color: #fff;
+  border: 3px solid white;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+}
+
+.news_last:hover {
+  color: #000000;
+  background-color: #fff;
+}
+
+.btn_nws {
+  display: flex;
+  justify-content: center;
+}
+
+h6 {
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  width: 100%;
+}
+
+.colorforque {
+  background-color: rgb(0, 0, 0);
+}
+
+.text-lg {
+  font-size: clamp(1.2rem, 8.8vw, 2.8rem);
+  font-weight: 600;
+}
+
+.text-md {
+  font-size: clamp(0.8rem, 5vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: gray;
+  margin-top: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid gray;
+}
+
+.container {
+  display: grid;
+  margin: auto;
+  place-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 0.4rem;
+  border: 1px dashed gray;
+}
+
+.faq-accordion {
+  display: grid;
+  gap: 0.4rem;
+  max-width: 50rem;
+}
+
+.faq-input {
+  display: none;
+}
+
+.faq-label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+  padding-inline: 3%;
+  background-color: var(--color-input);
+  border-bottom: 2px solid black;
+}
+
+.faq-content {
+  background-color: var(--color-input);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+}
+
+.faq-content p {
+  margin: 2rem;
+}
+
+.faq-input:checked ~ .faq-content {
+  max-height: 60rem;
+  transition: max-height 0.3s ease-in;
+}
+
+.faq-input:checked ~ .faq-label i {
+  transform: rotate(45deg);
+  transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+}
+
+/* Media Queries */
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+  h1 {
+      font-size: 28px;
+  }
+
+  .slid_in {
+      margin: 80px 10px;
+  }
+
+  .slid_three {
+      flex-direction: column;
+      margin-left: 0;
+  }
+
+  .animus_card {
+      grid-template-columns: 1fr;
+  }
+
+  .news_card_one {
+      grid-template-columns: 1fr;
+  }
+
+  .container {
+      padding: 1rem;
+  }
+}
+
+/* Small Devices (Landscape Phones) */
+@media (max-width: 767px) {
+  h1 {
+      font-size: 32px;
+  }
+
+  .slid_btn, .animus_btn, .news_btn {
+      font-size: 15px;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+  h1 {
+      font-size: 36px;
+  }
+
+  .slid_in {
+      margin: 100px 20px;
+  }
+
+  .slid_three {
+      margin-left: 20px;
+  }
+
+  .animus_card {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news_card_one {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1025px) {
+  .slid_in {
+      margin: 140px;
+  }
+
+  .animus_card {
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  .news_card_one {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 2048px) {
+  .container {
+      zoom: 1.5;
+  }
+
+  h1 {
+      font-size: 50px;
+  }
+}
+
+p {
+  color: rgb(255, 255, 255);
+}
+
+.faq-label {
+  color: white;
+}
+select {
+  width: 400px;
+  margin-top: 40px;
+  margin-bottom: 1em;
+  padding: .25em;
+  border: 0;
+  border-bottom: 2px solid currentcolor; 
+  font-weight: bold;
+  letter-spacing: .15em;
+ 
+  border-radius: 0;
+  &:focus, &:active {
+    outline: 0;
+    border-bottom-color: red;
+  }
+}
+.searchj {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.sidebar {
+  max-width: 250px;
+  width: 100%;
+  background-color: #000000;
+  height: 100%;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transition: max-width 0.3s ease;
+  
+}
+
+.sidebar h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  color: #f9f9f9;
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.bofas {
+  font-size: 32px;
+}
+.sidebar ul li a:hover {
+  background-color: #444;
+  color: #fff;
+}
+.altair {
+  width: 30px;
+  height: 40px;
+  
+}
+li {
+  display: flex;
+}
+.sidebar_logo {
+  width: 140px;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    max-width: 0;
+    width: 200px;
+  }
+
+ 
+
+  .toggle-btn {
+    display: block;
+  }
+}
+
+
+
+.sidebar {
+  display: block; 
+}
+
+
+@media (max-width: 1024px) {
+  .sidebar {
+      display: none; 
+  }
+}
+
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-175px * 25));
+  }
+}
+
+.sponsor-slider {
+  background: #F9FAFD;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Use 100% to make it full width */
+  max-width: 1260px; /* Maximum width to maintain layout */
+  padding: 0 20px; /* Add some padding for small screens */
+}
+
+.sponsor-slider::before,
+.sponsor-slider::after {
+  background: linear-gradient(to right, rgba(249, 250, 253, 1) 0%, rgba(249, 250, 253, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.sponsor-slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.sponsor-slider::before {
+  left: 0;
+  top: 0;
+}
+
+.sponsor-slider .sponsor-track {
+  animation: infinite-scroll 60s linear infinite;
+  display: flex;
+  width: calc(175px * 50); /* Total width for 50 sponsors */
+}
+
+.sponsor-slider .sponsor {
+  height: 100px;
+  width: 175px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .sponsor-slider .sponsor {
+    width: 150px; /* Adjust width for smaller screens */
+  }
+  
+  .sponsor-slider .sponsor-track {
+    width: calc(150px * 50); /* Update width based on new sponsor size */
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsor-slider .sponsor {
+    width: 120px; /* Further reduce size for smaller devices */
+  }
+  
+  .sponsor-slider .sponsor-track {
+    width: calc(120px * 50);
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsor-slider .sponsor {
+    width: 100px; /* Smallest width for very small screens */
+  }
+  
+  .sponsor-slider .sponsor-track {
+    width: calc(100px * 50);
+  }
+}
+
+/* Chatbot button container */
+.chatbot {
+  position: fixed;          /* Fixes the button on the page, so it stays in place as you scroll */
+  bottom: 20px;             /* 20px from the bottom of the page */
+  right: 20px;              /* 20px from the right edge */
+  width: 64px;              /* Width of the button (adjustable) */
+  height: 64px;             /* Height of the button (adjustable) */
+  background-color: #6c7dff; /* Button background color */
+  border-radius: 50%;       /* Circular button */
+  display: flex;            /* Flexbox for centering the SVG icon */
+  justify-content: center;  /* Center the content horizontally */
+  align-items: center;      /* Center the content vertically */
+  cursor: pointer;         /* Pointer cursor on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth transition effect on hover */
+}
+
+.chatbot:hover {
+  background-color: #5a6ad9; /* Change background color on hover */
+}
+.chatbot {
+  position: fixed;
+  bottom: 30px; /* Adjusted the position slightly */
+  right: 30px; /* Adjusted the position slightly */
+  width: 70px; /* Increased size for more prominence */
+  height: 70px; /* Increased size */
+  background-color: #4b6bff; /* Darker background color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+  border: 3px solid transparent; /* Transparent border initially */
+}
+
+/* Hover effects */
+.chatbot:hover {
+  background-color: #3a59e6; /* Lighter shade on hover */
+  transform: scale(1.15); /* Increased scale for a stronger hover effect */
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  border-color: #ffffff; /* White border on hover */
+}
+
+/* SVG icon inside the chatbot button */
+.chatbot svg {
+  fill: white;
+  width: 40px; /* Slightly larger icon */
+  height: 40px;
+  transition: transform 0.3s ease, fill 0.3s ease; /* Transition for rotation and color change */
+}
+
+/* SVG icon hover effect */
+.chatbot:hover svg {
+  transform: rotate(1180deg); /* Rotating the icon in the opposite direction */
+  fill: #f0f0f0; /* Lighter color when hovering */
+}
+
+/* Adding a focus state for accessibility */
+.chatbot:focus {
+  outline: 3px solid #4b6bff;
+  outline-offset: 4px; /* Increased offset for better visibility */
+}
+
+/* Optional active state (when button is clicked) */
+.chatbot:active {
+  transform: scale(1.05); /* Slightly reduce size on active state */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Reduce shadow on click */
+}
+@media (max-width: 400px) {
+  .news_card {
+    display: none;
+  } 
+}
+@media (max-width: 500px) {
+  .news_card {
+    display: none;
+  } 
+}
+@media (max-width: 580px) {
+  .news_card {
+    display: none;
+  } 
+}

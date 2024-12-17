@@ -1,0 +1,386 @@
+/* src/app/basket/basket.component.css */
+.basket {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  
+  
+}
+
+.basket h2 {
+  text-align: center;
+  font-size: 2.5rem; /* Slightly larger for emphasis */
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffffff, #ff6b6b);
+  -webkit-background-clip: text;
+  color: transparent; /* Makes text inherit the gradient */
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.black {
+  background-color: black;
+}
+.basket-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 2px solid transparent; /* Default to transparent */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.basket-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-color: red; /* Change border color on hover */
+}
+
+.basket-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.basket-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.basket-item h3 {
+  font-size: 1.2rem;
+  color: #444;
+  flex-grow: 1; /* Allows flexible width for title */
+}
+
+.basket-item p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0;
+}
+
+.x {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.x:hover {
+  background-color: #e60000;
+}
+
+/* Add responsive behavior */
+@media (max-width: 600px) {
+  .basket-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .basket-img {
+    margin: 0 0 10px 0;
+  }
+
+  .x {
+    margin-top: 10px;
+  }
+  .xx {
+    margin-top: 10px;
+  }
+}
+.xx {
+  background-color: #147c08;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.xx:hover {
+  background-color: #17a80a;
+}
+.butons {
+  gap: 20px;
+  display: flex;
+}
+.xx{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 2px;
+  padding-top: 2px;
+}
+/* Success Alert Styles */
+.alert-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.alert {
+  background-color: #28a745;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-weight: bold;
+  transform: translateX(200px);
+  animation: fadeIn 1s ease-in-out, slideIn 1s ease;
+}
+
+/* Alert Message Styling */
+.alert-message {
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Alert Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Alert Hover Effects */
+.alert:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+/* Styling for the cart image */
+.cart-img {
+  width: 350px; /* Set width for consistency */
+  max-width: 100%; /* Make sure it is responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px; /* Rounded corners for a smooth look */
+  border: 5px solid #222; /* Dark border for a sleek appearance */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Deep shadow for depth */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-radius 0.3s ease; /* Smooth animations */
+  animation: zoomIn 1s ease-out; /* Zoom-in effect */
+}
+
+/* Hover effect for the image */
+.cart-img:hover {
+  transform: scale(1.05); /* Slight zoom on hover for interactivity */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* More intense shadow on hover */
+  border-radius: 20px; /* Make the corners more rounded on hover */
+}
+
+/* Animation for zoom-in effect */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.cart_img {
+  border-radius: 50%;
+ 
+}
+
+.price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #444;
+  background-color: transparent;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.basket-item:hover .price {
+  opacity: 1;
+  transform: translateY(0);
+  color: #000; /* Darker color on hover */
+  font-size: 1.1rem; /* Slight size increase on hover */
+}
+
+/* Responsive behavior for smaller screen sizes */
+
+/* General responsiveness */
+@media (max-width: 768px) {
+  .basket {
+    padding: 15px; /* Adjust padding on smaller screens */
+  }
+
+  .basket h2 {
+    font-size: 2rem; /* Adjust heading size */
+    text-align: center; /* Center align on smaller screens */
+  }
+
+  .basket-item {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: center; /* Center the text */
+    margin-bottom: 10px; /* Reduce margin between items */
+    padding: 12px; /* Adjust padding */
+  }
+
+  .basket-img {
+    width: 70px; /* Adjust image size */
+    height: 70px;
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 10px; /* Add margin at the bottom */
+  }
+
+  .basket-item h3 {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .basket-item p {
+    font-size: 0.8rem; /* Adjust font size for description */
+  }
+
+  .butons {
+    gap: 15px; /* Adjust button gap */
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .x, .xx {
+    width: 28px; /* Adjust button size */
+    height: 28px;
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  .cart-img {
+    width: 300px; /* Adjust cart image size */
+  }
+
+  .price {
+    font-size: 0.9rem; /* Adjust price font size */
+  }
+}
+
+/* Additional responsiveness for very small screens (mobile phones) */
+@media (max-width: 480px) {
+  .basket h2 {
+    font-size: 1.8rem; /* Further reduce font size */
+  }
+
+  .basket-item {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .basket-img {
+    width: 60px; /* Further reduce image size */
+    height: 60px;
+  }
+
+  .basket-item h3 {
+    font-size: 0.9rem; /* Further reduce font size */
+  }
+
+  .basket-item p {
+    font-size: 0.75rem; /* Further reduce description font size */
+  }
+
+  .xx, .x {
+    width: 25px; /* Smaller close/delete buttons */
+    height: 25px;
+    font-size: 0.8rem; /* Smaller font size for button text */
+  }
+
+  .butons {
+    gap: 10px; /* Reduce space between buttons */
+  }
+
+  .cart-img {
+    width: 250px; /* Further reduce image size */
+  }
+
+  .price {
+    font-size: 0.8rem; /* Adjust price font size */
+  }
+}
+
+/* For extremely small screens, like portrait mobile phones */
+@media (max-width: 320px) {
+  .basket {
+    padding: 10px; /* Even smaller padding */
+  }
+
+  .basket h2 {
+    font-size: 1.5rem; /* Smaller heading */
+  }
+
+  .basket-item {
+    padding: 8px; /* Smaller padding for items */
+  }
+
+  .basket-img {
+    width: 50px; /* Even smaller image size */
+    height: 50px;
+  }
+
+  .basket-item h3 {
+    font-size: 0.8rem; /* Further reduce font size */
+  }
+
+  .basket-item p {
+    font-size: 0.7rem; /* Reduce text for smaller screens */
+  }
+
+  .x, .xx {
+    width: 22px; /* Tiny delete/close buttons */
+    height: 22px;
+    font-size: 0.7rem; /* Tiny font size for buttons */
+  }
+
+  .butons {
+    gap: 5px; /* Tighten space between buttons */
+  }
+
+  .cart-img {
+    width: 220px; /* Further reduce cart image size */
+  }
+
+  .price {
+    font-size: 0.7rem; /* Reduce font size even more */
+  }
+}
+

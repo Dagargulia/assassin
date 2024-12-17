@@ -1,0 +1,120 @@
+<section>
+  <div class="topSide">
+    <div class="parent-login">
+      <form class="login-card" (ngSubmit)="signIn()" #loginForm="ngForm">
+        <h1>Sign In</h1>
+        
+        <!-- Email input -->
+        <div class="userInput">
+          <input
+            type="text"
+            name="email"
+            placeholder="Email or phone number"
+            [(ngModel)]="email"
+            required
+            #emailField="ngModel"
+            [ngClass]="{'invalid': emailField.invalid && emailField.touched}"
+          />
+          <div *ngIf="emailField.invalid && emailField.touched" class="error-message">
+            Please enter a valid email.
+          </div>
+        </div>
+        
+        <!-- Password input -->
+        <div class="userInput">
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            [(ngModel)]="password"
+            required
+            #passwordField="ngModel"
+            [ngClass]="{'invalid': passwordField.invalid && passwordField.touched}"
+          />
+          <div *ngIf="passwordField.invalid && passwordField.touched" class="error-message">
+            Password is required.
+          </div>
+        </div>
+        
+        <!-- Sign in button -->
+        <div>
+          <button type="submit" class="btn-login" [disabled]="loginForm.invalid">Sign In</button>
+        </div>
+        
+        <!-- Remember me checkbox -->
+        <div class="remMe">
+          <div>
+            <input type="checkbox" [(ngModel)]="rememberMe" />
+            <label class="cText">Remember me</label>
+          </div>
+        </div>
+        
+        <!-- Social login -->
+        <div class="login2">
+          <img
+            src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3h4s0GE47IBDxheVyJkfuX/e854163c0246c91bd79f390e9414391e/ubisoft_logo_whiteonblack_960x540_351175.jpg"
+            height="20"
+          />
+          <a href="#" class="cLink fb">Login with ubisoft</a>
+        </div>
+        
+        <!-- Sign up link -->
+        <div class="signUp">
+          New to Ubisoft? <a class="sLink" routerLink="signup"><!-- Registration Form -->
+            <div *ngIf="registrationMode">
+                <h1>Register</h1>
+                <div class="userInput">
+                  <input
+                    type="text"
+                    name="registerEmail"
+                    placeholder="Email"
+                    [(ngModel)]="email"
+                    required
+                    #registerEmailField="ngModel"
+                    [ngClass]="{'invalid': registerEmailField.invalid && registerEmailField.touched}"
+                  />
+                  <div *ngIf="registerEmailField.invalid && registerEmailField.touched" class="error-message">
+                    Please enter a valid email.
+                  </div>
+                </div>
+                <div class="userInput">
+                  <input
+                    type="password"
+                    name="registerPassword"
+                    placeholder="Password"
+                    [(ngModel)]="password"
+                    required
+                    #registerPasswordField="ngModel"
+                    [ngClass]="{'invalid': registerPasswordField.invalid && registerPasswordField.touched}"
+                  />
+                  <div *ngIf="registerPasswordField.invalid && registerPasswordField.touched" class="error-message">
+                    Password is required.
+                  </div>
+                </div>
+                <div>
+                  <button class="btn-login" (click)="register()">Register</button>
+                  <button class="btn-login" (click)="toggleRegistration()">Back to Login</button>
+                </div>
+              </div>
+              
+              <!-- Registration link -->
+              <div *ngIf="!registrationMode">
+                <div class="signUp">
+                  Don't have an account? <a (click)="toggleRegistration()">Register here</a>
+                </div>
+              </div>
+              </a>
+        </div>
+        
+        <!-- reCAPTCHA protection message -->
+        <div class="google cLink">
+          This page is protected by Google reCAPTCHA to ensure you're not a bot.
+          <a href="#">Learn more.</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sign-in success alert -->
+  
+</section>

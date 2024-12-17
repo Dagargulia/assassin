@@ -1,0 +1,185 @@
+<header class="headermine">
+    <div class="logomine">
+      <a href="http://localhost:4200/journey">
+        <img src="https://files.oaiusercontent.com/file-5SzfQgxPVJaSQ7UPrhLKHy?se=2024-11-28T10%3A57%3A34Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D93892f4d-1c03-4867-871e-9d27d9ce2ac8.webp&sig=NroO%2B5Q7W0wpHdFWg1TeO2vIEeGQZWp7VY2/VIyVtWM%3D" alt="" class="logo_img">      </a>
+    </div>
+    <button class="burger-menu" (click)="toggleMenu()">
+      <!-- Hamburger icon -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="navmine" [class.open]="menuOpen">
+      <ul>
+        <li><a href="http://localhost:4200/journey" routerLink="journey">Home</a></li>
+        <li><a href="http://localhost:4200/tikets" routerLink="tikets">Ticket</a></li>
+        <li><a href="http://localhost:4200/friend" routerLink="friend">Support</a></li>
+        <li><a href="http://localhost:4200/mytickets" routerLink="mytickets">My Tickets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="welcome-section">
+    <div class="welcome-text">
+        <h1>Welcome to Your Next Adventure</h1>
+        <p>
+            Embark on an unforgettable journey to explore the wonders of the world. 
+            Purchase tickets effortlessly and prepare for a once-in-a-lifetime experience. 
+            Start your adventure today!
+        </p>
+        <a href="http://localhost:4200/tikets" routerLink="tikets" class="cta-button">Buy Tickets</a>
+    </div>
+    <div class="welcome-image">
+        <img src="https://files.oaiusercontent.com/file-DGthEA7gDdW3KyFpmfm3QJ?se=2024-11-28T16%3A43%3A24Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D299%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dimage.png&sig=7e%2B7sZ2eUsDUoDgCRd/vLkIaqQfZsD0SBJuTfmWpH2g%3D" 
+             alt="Earth Journey" />
+    </div>
+</section>
+
+  <section class="popular">
+    <h2>Popular Locations</h2>
+    <div class="popularList">
+        <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQUSilX85FIaFroVaNTyOUfx7XJh0-3jAvHVDmo62QL3ViJouZBhDXsjPRA68-QnL927xsB2JPMJhNzXCoXLl5v6lp73-l4syjgZPS_Fw" alt="Florence, Italy">
+        <h3>Florence, Italy</h3>
+        <p><strong>Description:</strong> Explore the breathtaking Renaissance city of Florence in <em>Assassin's Creed II</em>. Florence is home to iconic landmarks such as the Duomo, Pstreets, marvel at its architectural wonders, and interact with historical figures like Leonardo da Vinci.</p>
+        <p><strong>Information:</strong> Florence is home to iconic landmarks such as the Duomo, Ponte Vecchio, and Palazzo Medici, serving as a hub for Ezio Auditore's adventures.</p>
+    </div>
+    <div class="popularList">
+        <img src="https://istanbulclues.com/wp-content/uploads/2015/11/CONSTANTINOPLE_4.jpg" alt="Constantinople, Ottoman Empire">
+        <h3>Constantinople, Ottoman Empire</h3>
+        <p><strong>Description:</strong> Step into the vibrant city of Constantinople during the 16th century in <em>Assassin's Creed Revelations</em>. The city acts as a melting pot of cultures, politics, and intrigue.</p>
+        <p><strong>Information:</strong> Landmarks include the Hagia Sophia, Topkapi Palace, and the bustling Grand Bazaar. Constantinople provides a richly detailed setting for Ezio's later years.</p>
+    </div>
+    <div class="popularList">
+        <img src="https://paristickets.tours/wp-content/uploads/2022/09/paris-at-spring.jpg" alt="Paris, France">
+        <h3>Paris, France</h3>
+        <p><strong>Description:</strong> Relive the chaos of the French Revolution in <em>Assassin's Creed Unity</em>. Navigateeee the sprawling sprawling sprawlingstreets and rooftops of Paris, and witness the fall of the monarchy.</p>
+        <p><strong>Information:</strong> Key locations include the Notre-Dame Cathedral, the Louvre, and Place de la Révolution, all stunningly recreated in this historically significant setting.</p>
+    </div>
+    <div class="popularList">
+        <img src="https://www.exoticca.com/_next/image?url=https%3A%2F%2Fuploads.exoticca.com%2Fglobal%2Fdestination%2Fpoi%2Falexandria.png&w=3840&q=75" alt="Ancient Alexandria, Egypt">
+        <h3>Ancient Alexandria, Egypt</h3>
+        <p><strong>Description:</strong> Discover the wonders of Ancient Egypt during the Ptolemaic period in <em>Assassin's Creed Origins</em>. Alexandria offers a mix of Greek and Egyptian culture.</p>
+        <p><strong>Information:</strong> This bustling city is home to the Great Library, the Lighthouse of Alexandria, and sprawling and the the royal palace, integral to Bayek's journey.This bustling city is home to the Great Library, the Lighthouse of Alexandria, and the royal palace, integral to  Bayek's journey.</p>
+    </div>
+    <div class="popularList">
+        <img src="https://media.cntraveller.com/photos/665ee92a9421aab48dea082c/16:9/w_2560%2Cc_limit/venice-GettyImages-941234062.jpeg" alt="Venice, Italy">
+        <h3>Venice, Italy</h3>
+        <p><strong>Description:</strong> Dive into the enchanting canals of Venice in <em>Assassin's Creed II</em>. Experience its unique charm, vibrant festivals, and architectural splendor.</p>
+        <p><strong>Information:</strong> Key landmarks include St. Mark's Basilica,  Venice plays a significantthe Doge's Palace, and the iconic Dive into the enchanting canals of Venice in Rialto Bridge. Venice plays a significant role in Ezio's journey.</p>
+    </div>
+    <div class="popularList">
+        <img src="https://cdn.contexttravel.com/image/upload/c_fill,q_60,w_2600/v1726676522/production/city/hero_image_11_1726676522427f69be.jpg" alt="London, England">
+        <h3>London, England</h3>
+        <p><strong>Description:</strong> Witness the Industrial Revolution in full swing in <em>Assassin's Creed Syndicate</em>. Navigate the smog-filled streets and bustling factories of Victorian London.</p>
+        <p><strong>Information:</strong> Iconic sites such as Big Ben, the Tower of London, and Buckingham Palace are central to the story of Jacob and Evie Frye.</p>
+    </div>
+    <div class="popularList">
+        <img src="https://ipanematravels.com/wp-content/uploads/2023/10/Athens-Greece.jpg" alt="Athens, Greece">
+        <h3>Athens, Greece</h3>
+        <p><strong>Description:</strong> Immerse yourself in the cradle of Western civilization during the Peloponnesian War in <em>Assassin's Creed Odyssey</em>. Explore Athens' rich history and cultural significance.</p>
+        <p><strong>Information:</strong> Visit the Acropolis, Parthenon, and Agora as you uncover mysteries and battle alongside Spartans in this ancient city.</p>
+    </div>
+    <div class="popularList">
+        <img src="https://www.cruiseandtravel.co.uk/wp-content/uploads/2016/07/GDKRNE-scaled-e1709743929251.jpg" alt="New Orleans, Louisiana">
+        <h3>New Orleans, Louisiana</h3>
+        <p><strong>Description:</strong> Step into the 18th-century colonial era in <em>Assassin's Creed III: Liberation</em>. Navigate the French Quarter and bayous of New Orleans.</p>
+        <p><strong>Information:</strong> The city's vibrant Creole culture and historical significance provide a unique backdrop for Aveline de Grandpré's story.</p>
+    </div>
+    
+
+
+    <div id="map">
+      <!-- Example Markers -->
+      <div class="marker" style="top: 50%; left: 48%;" data-city="Florence"></div>
+      <div class="tooltip" style="top: 50%; left: 48%;"><img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQUSilX85FIaFroVaNTyOUfx7XJh0-3jAvHVDmo62QL3ViJouZBhDXsjPRA68-QnL927xsB2JPMJhNzXCoXLl5v6lp73-l4syjgZPS_Fw" alt="Florence, Italy">
+        <h3>Florence, Italy</h3>
+        <p><strong>Description:</strong> Explore the breathtaking Renaissance city of Florence in <em>Assassin's Creed II</em>. Florence is home to iconic landmarks such as the Duomo, Pstreets, marvel at its architectural wonders, and interact with historical figures like Leonardo da Vinci.</p>
+        <p><strong>Information:</strong> Florence is home to iconic landmarks such as the Duomo, Ponte Vecchio, and Palazzo Medici, serving as a hub for Ezio Auditore's adventures.</p></div>
+
+      <div class="marker" style="top: 54%; left: 51%;" data-city="Constantinople"></div>
+      <div class="tooltip" style="top: 54%; left: 51%;"><img src="https://istanbulclues.com/wp-content/uploads/2015/11/CONSTANTINOPLE_4.jpg" alt="Constantinople, Ottoman Empire">
+        <h3>Constantinople, Ottoman Empire</h3>
+        <p><strong>Description:</strong> Step into the vibrant city of Constantinople during the 16th century in <em>Assassin's Creed Revelations</em>. The city acts as a melting pot of cultures, politics, and intrigue.</p>
+        <p><strong>Information:</strong> Landmarks include the Hagia Sophia, Topkapi Palace, and the bustling Grand Bazaar. Constantinople provides a richly detailed setting for Ezio's later years.</p></div>
+
+      <div class="marker" style="top: 48%; left: 47%;" data-city="Paris"></div>
+      <div class="tooltip" style="top: 48%; left: 47%;"><img src="https://paristickets.tours/wp-content/uploads/2022/09/paris-at-spring.jpg" alt="Paris, France">
+        <h3>Paris, France</h3>
+        <p><strong>Description:</strong> Relive the chaos of the French Revolution in <em>Assassin's Creed Unity</em>. Navigateeee the sprawling sprawling sprawlingstreets and rooftops of Paris, and witness the fall of the monarchy.</p>
+        <p><strong>Information:</strong> Key locations include the Notre-Dame Cathedral, the Louvre, and Place de la Révolution, all stunningly recreated in this historically significant setting.</p></div>
+
+      <div class="marker" style="top: 60%; left: 53%;" data-city="Ancient Alexandria"></div>
+      <div class="tooltip" style="top: 60%; left: 53%;">Ancient Alexandria</div>
+
+      <div class="marker" style="top: 50%; left: 49%;" data-city="Venice"></div>
+      <div class="tooltip" style="top: 50%; left: 49%;"><img src="https://media.cntraveller.com/photos/665ee92a9421aab48dea082c/16:9/w_2560%2Cc_limit/venice-GettyImages-941234062.jpeg" alt="Venice, Italy">
+        <h3>Venice, Italy</h3>
+        <p><strong>Description:</strong> Dive into the enchanting canals of Venice in <em>Assassin's Creed II</em>. Experience its unique charm, vibrant festivals, and architectural splendor.</p>
+        <p><strong>Information:</strong> Key landmarks include St. Mark's Basilica,  Venice plays a significantthe Doge's Palace, and the iconic Dive into the enchanting canals of Venice in Rialto Bridge. Venice plays a significant role in Ezio's journey.</p></div>
+
+      
+
+      <div class="marker" style="top: 40%; left: 20%;" data-city="New Orleans"></div>
+      <div class="tooltip" style="top: 40%; left: 20%;"><img src="https://www.cruiseandtravel.co.uk/wp-content/uploads/2016/07/GDKRNE-scaled-e1709743929251.jpg" alt="New Orleans, Louisiana">
+        <h3>New Orleans, Louisiana</h3>
+        <p><strong>Description:</strong> Step into the 18th-century colonial era in <em>Assassin's Creed III: Liberation</em>. Navigate the French Quarter and bayous of New Orleans.</p>
+        <p><strong>Information:</strong> The city's vibrant Creole culture and historical significance provide a unique backdrop for Aveline de Grandpré's story.</p></div>
+
+      
+  </div>
+
+
+
+</section>
+<section class="my">
+    <div class="map-container">
+        <img class="my_img" src="https://f.worldota.net/partner/frontend/master/b658682/_next/static/media/world-map.9c015946.webp" alt="World Map">
+        <div class="map-overlay">
+            <h2>Your Global Journey Awaits</h2>
+            <p>Explore destinations, connect with cultures, and start your adventure today!</p>
+            <a href="http://localhost:4200/tickets" routerLink="tickets" class="explore-btn">Explore Now</a>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <h1>Easy To Manage.</h1>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+      <img src="https://f.worldota.net/partner/frontend/master/b658682/_next/static/media/map1920.f9f7c148.webp" alt="Map" class="map-image">
+      <div class="map-text">
+        <h2>Intelligent product for efficient workflow</h2>
+        <p>
+          Based on our tech experience and travel industry knowledge, we designed a
+          lightning-fast search engine and a responsive interface to streamline your travel
+          booking services for hotels, air tickets, and more.
+        </p>
+      </div>
+    </div>
+
+    <!-- Hotels Section -->
+    <div class="hotels-section">
+      <img src="https://f.worldota.net/partner/frontend/master/b658682/_next/static/media/hotels1920.4e16c488.webp" alt="Hotels" class="hotels-image">
+      <div class="hotels-text">
+        <h2>Sell to your clients effectively</h2>
+        <p>
+          Rich hotel content and an extensive review base are designed to help you pick only
+          the best accommodations. Combine different options with the Selection tool, add
+          commissions and discounts to help your clients make the right choice.
+        </p>
+      </div>
+    </div>
+
+    <!-- Register Button -->
+   
+<section class="banner">
+    <div class="banner-content">
+        <h1>Embark on Your Journey</h1>
+        <p>Discover the world with us! Your adventure begins here.</p>
+        <a  href="http://localhost:4200/tickets" routerLink="tickets" class="order-ticket-btn">Order Ticket</a>
+    </div>
+</section>

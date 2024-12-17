@@ -1,0 +1,328 @@
+.slid {
+    background-image: url(https://images7.alphacoders.com/419/thumb-1920-419788.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    
+   
+}
+
+.slid_img {
+    width: 28%;
+    background-color: #000000;
+    
+}
+
+.slid_img_ii {
+    width: 30%;
+    margin-top: 20px;
+}
+
+.slidb {
+    width: 100%;
+}
+
+.slidm {
+    width: 100%;
+}
+
+.slidn {
+    width: 400px;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.slid_one {
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    
+}
+
+.slid_in {
+    margin: 140px;
+}
+
+.slid_btn {
+    transition: all .5s ease;
+    color: #ffffff;
+    border: 3px solid rgb(255, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.slid_btn:hover {
+    color: #ffffff;
+    background-color: #fc0000;
+}
+
+.slid_uder {
+    color: white;
+    margin: 10px;
+}
+
+h3 {
+    color: white;
+    margin: 10px;
+}
+
+.jsdfasf {
+    color: #00000000;
+}
+
+.two {
+    background-image: url(https://wallpaperswide.com/download/assassins_creed_iv_black_flag_9-wallpaper-1440x900.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.twoh1 {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.jsdgas {
+    color: #00000000;
+}
+
+.twys {
+    margin-top: 20px;
+    background-color: #00000042;
+}
+.first_one {
+    background-color: #00000077;
+    border-radius: 22px;
+}
+.twop {
+    display: grid;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.first {
+    justify-content: center;
+    margin: 60px;
+    background-color: #00000057;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    border-radius: 22px;
+}
+
+.fu {
+    color: #00000000;
+    font-size: 40px;
+}
+
+.first_img {
+    width: 100%;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+}
+
+.firsth2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin: 20px;
+}
+h2 {
+    color: #00000000;
+}
+
+.firstp {
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: white;
+    margin: 20px;
+    margin-bottom: 20px;
+}
+
+.all {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.firstbtn,
+.firstbtn_two,
+.firstbtn_three {
+    margin: 20px;
+    background-color: rgba(245, 245, 220, 0);
+    color: white;
+    border: 0px;
+    transition: all .5s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.firstbtn_three:hover {
+    color: #654607;
+}
+
+.firstbtn:hover {
+    color: #654607;
+}
+
+.firstbtn_two:hover {
+    color: #654607;
+}
+
+.firstbtn_two {
+    margin: 20px;
+}
+
+.firstbtn_three {
+    margin: 20px;
+}
+
+@media (max-width: 1024px) {
+    .slid_in {
+        margin: 80px;
+    }
+    
+    .slid_img {
+        width: 40%;
+    }
+    
+    .slid_img_ii {
+        width: 50%;
+        margin-top: 15px;
+    }
+    
+    .slidn {
+        width: 300px;
+    }
+    
+    .twoh1 {
+        font-size: 36px;
+    }
+    
+    .first {
+        margin: 30px;
+    }
+    
+    .firsth2 {
+        font-size: 24px;
+    }
+    
+    .twop {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slid_in {
+        margin: 40px;
+    }
+    
+    .slid_img {
+        width: 60%;
+    }
+    
+    .slid_img_ii {
+        width: 70%;
+    }
+    
+    .slidn {
+        width: 250px;
+    }
+    
+    .twoh1 {
+        font-size: 30px;
+    }
+    
+    .first {
+        margin: 20px;
+    }
+    
+    .firsth2 {
+        font-size: 22px;
+    }
+    
+    .twop {
+        font-size: 14px;
+    }
+    
+    .all {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .slid_img {
+        width: 80%;
+    }
+    
+    .slid_img_ii {
+        width: 90%;
+        margin-top: 10px;
+    }
+    
+    .slidn {
+        width: 200px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .twoh1 {
+        font-size: 24px;
+    }
+    
+    .first {
+        margin: 10px;
+    }
+    
+    .firsth2 {
+        font-size: 20px;
+    }
+    
+    .twop {
+        font-size: 12px;
+    }
+    
+    .slid_btn {
+        font-size: 15px;
+        padding: 8px;
+    }
+}
+.mediatwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 60px;
+    gap: 20px;
+}
+.media_img {
+    width: 100%;
+    
+}
+.mediah {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+}
+.media {
+   background-color: #000000;
+}

@@ -1,0 +1,43 @@
+<section class="daga">
+    <h6>.</h6>
+<div *ngIf="showImageModal" class="image-modal">
+    <div class="modal-content">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/2d4874152517723.633bc02c8acc7.gif" alt="Intro Image" class="intro-image"/>
+      <!-- Close button -->
+      <button (click)="showImageModal = false">Close</button>
+    </div>
+  </div>
+<div class="quiz-container">
+    <!-- Image Modal -->
+    
+  
+    <!-- Quiz Section -->
+    <h1>Assassin's Creed Character Quiz</h1>
+  
+    <!-- Quiz Questions Section -->
+    <div *ngIf="!showResult">
+      <div *ngFor="let question of questions; let i = index" class="question-block">
+        <h2>{{ question.question }}</h2>
+        <div *ngFor="let option of question.options" class="option">
+          <input
+            type="radio"
+            [name]="'question' + i"
+            [value]="option.value"
+            (change)="selectAnswer(i, option.value)"
+          />
+          <label>{{ option.text }}</label>
+        </div>
+      </div>
+      <button (click)="submitQuiz()">Submit</button>
+    </div>
+  
+    <!-- Quiz Result Section -->
+    <div *ngIf="showResult" class="result">
+      <h2>You are: {{ result }}</h2>
+      <p>{{ resultDescription }}</p>
+      <img [src]="resultImage" alt="{{ result }}" class="result-image" />
+      <button (click)="restartQuiz()">Restart Quiz</button>
+    </div>
+  </div>
+  <h6>.</h6>
+</section>

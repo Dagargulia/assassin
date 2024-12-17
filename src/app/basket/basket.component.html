@@ -1,0 +1,39 @@
+<section class="black">
+  <section class="basket">
+    <h2>Your Basket</h2>
+    <div *ngIf="basket.length === 0" class="empty-basket">
+      <p>Your basket is empty. Start adding games!</p>
+      <img src="https://i.pinimg.com/originals/4d/0e/d0/4d0ed09b41b6965524ebac6a33e2141d.gif" alt="" class="cart_img">
+    </div>
+    <div *ngFor="let game of basket" class="basket-item">
+      <img [src]="game.coverimg" alt="" class="basket-img" />
+      <h3>{{ game.Name }}</h3>
+      <div class="price">{{ game.price }}</div>
+      <div class="butons">
+        <button class="xx" (click)="showSuccessAlert()">
+          <svg fill="#ffffff" width="20px" height="20px" viewBox="0 0 24 24" id="cart-check" xmlns="http://www.w3.org/2000/svg" class="icon line-color">
+            <g>
+              <path d="M11,20.5h.1m5.9,0h.1" style="fill: none; stroke: #ffffff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
+              <polyline points="12 7 14 9 18 5" style="fill: none; stroke: #ffffff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></polyline>
+              <path d="M3,3H5.2a1,1,0,0,1,1,.78L8.82,15.22a1,1,0,0,0,1,.78h8.42a1,1,0,0,0,1-.76L21,8" style="fill: none; stroke: #ffffff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
+            </g>
+          </svg>
+        </button>
+        <button (click)="delete(game)" class="x">x</button>
+      </div>
+    </div>
+    
+   
+
+    
+  </section>
+</section>
+
+
+<div class="alert-container" *ngIf="alertVisible">
+  <div class="alert">
+    <span class="alert-message">Successfully Bought!</span>
+  </div>
+</div>
+
+

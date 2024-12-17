@@ -1,0 +1,387 @@
+.slid {
+    background-image: url(https://www.accesstheanimus.com/ACV/A/10a.png);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.slid_img {
+    width: 28%;
+}
+
+.slid_img_ii {
+    width: 30%;
+    margin-top: 20px;
+}
+
+.slidb {
+    width: 100%;
+}
+
+.slidm {
+    width: 100%;
+}
+
+.slidn {
+    width: 400px;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.slid_one {
+    color: white;
+    margin-top: 20px;
+}
+
+.slid_in {
+    margin: 140px;
+}
+
+.slid_btn {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.slid_btn:hover {
+    color: #000000;
+    background-color: #fff;
+}
+
+.slid_uder {
+    color: white;
+    margin: 10px;
+}
+
+h3 {
+    color: white;
+    margin: 10px;
+}
+
+.news_card {
+    background-image: url(https://media.wired.com/photos/6046813abc9d842459e763e1/master/pass/games_valhalla_wanderlust.jpg);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.minh {
+    text-align: center;
+}
+
+.news_date {
+    color: white;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.news_text {
+    color: white;
+    margin-top: 10px;
+    font-size: 22px;
+    margin: 20px;
+}
+
+.news_btn {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.news_btn:hover {
+    color: #000000;
+    background-color: #fff;
+}
+
+.news_card_one {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin: 80px;
+}
+
+.news_img {
+    width: 100%;
+}
+
+.news_foot {
+    background-color: rgba(255, 255, 255, 0);
+    color: #fff;
+    width: 180px;
+    margin-top: 10px;
+    margin: 20px;
+}
+
+.news_card_one_row {
+    background-image: url(https://static.voidu.com/cdn-cgi/image/format=webp,width=896,quality=99/images/thumbs/0188168_assassins-creed-valhalla.png);
+    border-radius: 22px;
+    background-position: center;
+    background-size: cover;
+}
+
+.news_text_two {
+    color: white;
+    margin: 20px;
+}
+
+.news_last {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+}
+
+.news_last:hover {
+    color: #000000;
+    background-color: #fff;
+}
+
+.btn_nws {
+    display: flex;
+    justify-content: center;
+}
+
+.fake {
+    color: #00000000;
+}
+
+.fuk {
+    margin-top: 20px;
+}
+
+.minh {
+    color: #fff;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.bannner {
+    display: flex;
+    justify-content: center;
+}
+
+.ban_img {
+    width: 100%;
+}
+
+.three_p {
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.second_h {
+    text-align: center;
+    font-size: 34px;
+    color: #fff;
+}
+
+.build {
+    background-image: url(https://images.alphacoders.com/110/1105521.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+}
+
+.back_gre {
+    background-color: #00000053;
+    margin-top: 60px;
+}
+
+.builda {
+    background-image: url(https://www.psu.com/wp/wp-content/uploads/2020/10/Assassins-Creed-Valhalla-PS4-PS5-Wallpapers-06.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+}
+
+.charactertwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.firt_car {
+    width: 350px;
+    border: 1px solid white;
+    margin: auto;
+    border-radius: 22px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.first_car_img {
+    width: 100%;
+    border-radius: 22px;
+}
+
+.firt_car:hover {
+    box-shadow: 0 0 5px 5px #fff;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.mine_car {
+    text-align: center;
+    font-size: 48px;
+    color: #fff;
+}
+/* Media Queries */
+/* Responsive Design */
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+    .slid_in {
+        margin: 10px;
+    }
+    .slid_btn {
+        font-size: 12px;
+        padding: 6px;
+    }
+    .minh {
+        font-size: 24px;
+    }
+    .news_text {
+        font-size: 16px;
+    }
+    .news_card_one {
+        grid-template-columns: 1fr;
+        margin: 10px;
+        gap: 20px;
+    }
+    .firt_car {
+        width: 100%;
+    }
+    .charactertwo {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small Devices (Tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    .slid_in {
+        margin: 20px;
+    }
+    .slid_btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .minh {
+        font-size: 28px;
+    }
+    .news_text {
+        font-size: 18px;
+    }
+    .news_card_one {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px;
+        gap: 20px;
+    }
+    .firt_car {
+        width: 80%;
+    }
+    .charactertwo {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+}
+
+/* Medium Devices (Desktops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 32px;
+    }
+    .slid_in {
+        margin: 50px;
+    }
+    .slid_btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .minh {
+        font-size: 36px;
+    }
+    .news_card_one {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 40px;
+        gap: 30px;
+    }
+    .firt_car {
+        width: 60%;
+    }
+    .charactertwo {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Large Devices (Laptops and Bigger) */
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 40px;
+    }
+    .slid_in {
+        margin: 140px;
+    }
+    .slid_btn {
+        font-size: 17px;
+        padding: 12px;
+    }
+    .minh {
+        font-size: 48px;
+    }
+    .news_card_one {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 80px;
+        gap: 40px;
+    }
+    .firt_car {
+        width: 350px;
+    }
+    .charactertwo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

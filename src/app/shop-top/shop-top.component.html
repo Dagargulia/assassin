@@ -1,0 +1,133 @@
+<div class="shop-content" [class.dark-mode]="isDarkMode">
+  <body>
+<header class="firts_header">
+    <div class="moon">
+    <button (click)="toggleDarkMode()" class="theme-toggle-button">
+      <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2a9.93 9.93 0 0 1 7.094 2.906A9.93 9.93 0 0 1 22 12a9.93 9.93 0 0 1-2.906 7.094A9.93 9.93 0 0 1 12 22a9.93 9.93 0 0 1-7.094-2.906A9.93 9.93 0 0 1 2 12a9.93 9.93 0 0 1 2.906-7.094A9.93 9.93 0 0 1 12 2zm0 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path>
+      </svg>
+      <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+        <circle cx="12" cy="12" r="5"></circle>
+        <path d="M12 1v2"></path>
+        <path d="M12 21v2"></path>
+        <path d="M4.22 4.22l1.42 1.42"></path>
+        <path d="M18.36 18.36l1.42 1.42"></path>
+        <path d="M1 12h2"></path>
+        <path d="M21 12h2"></path>
+        <path d="M4.22 19.78l1.42-1.42"></path>
+        <path d="M18.36 5.64l1.42-1.42"></path>
+      </svg>
+    </button>
+  </div>
+
+    <div class="logo">
+
+        <img src="https://assassinscreedmerch.com/wp-content/uploads/2023/08/Logo-1.png" alt="" class="first_header_img">
+
+    </div>
+    
+
+</header>
+<div class="faded-line"></div>
+
+
+
+
+<!-- nnnnnnnnnnnnnnnnnnnnnnnnnnnnn             eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee               wwwwwwwwwwwwwwwwwwwwwwww -->
+
+<div class="shop-top">
+  <!-- Sidebar Section -->
+  <div class="sidebar">
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search products..."
+        [(ngModel)]="searchQuery"
+        (input)="filterProducts()"
+      />
+    </div>
+      <div class="categories">
+        <h2>Product Categories</h2>
+        <ul>
+          <li *ngFor="let category of categories" (click)="filterByCategory(category)">
+            {{ category }}
+          </li>
+        </ul>
+      </div>
+      <div class="recently-viewed">
+        <h2>Recently Viewed Products</h2>
+        <ul>
+          <li *ngFor="let product of recentlyViewedProducts">
+            <img [src]="product.image" alt="{{ product.name }}" />
+            <div>
+              <p>{{ product.name }}</p>
+              <p class="price">{{ product.price | currency }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Main Content Section -->
+    <div class="main-content">
+      <!-- Sort Options -->
+      <div class="sort-options">
+        <label>Sort by:</label>
+        <select [(ngModel)]="sortOption" (change)="sortProducts()">
+          <option value="popularity">Popularity</option>
+          <option value="priceLowToHigh">Price: Low to High</option>
+          <option value="priceHighToLow">Price: High to Low</option>
+        </select>
+      </div>
+  
+      <!-- Product List -->
+      <div class="product-list">
+        <div *ngFor="let product of paginatedProducts" class="product-card">
+          <img [src]="product.image" alt="{{ product.name }}" />
+          <h3>{{ product.name }}</h3>
+          <p class="price">{{ product.price | currency }}</p>
+          <button (click)="showAlert(product.name)">Buy Now</button>
+        </div>
+      
+      
+      <!-- Alert Box -->
+      <div *ngIf="isCelebrationActive" class="confetti-container">
+        <!-- Generate confetti pieces dynamically -->
+        <div *ngFor="let confetti of confettiArray" class="confetti" [ngStyle]="confetti.style"></div>
+      </div>
+      
+      <div class="alert-box" *ngIf="isAlertVisible" [ngClass]="{ 'show': isAlertVisible }">
+        <div class="alert-content">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-4-4 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+          </svg>
+          <h2>Success!</h2>
+          <p>{{ alertMessage }}</p>
+        </div>
+      </div>
+      
+      
+      
+  
+      <!-- Pagination Controls -->
+      <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">←</button>
+        <span
+          *ngFor="let page of [].constructor(totalPages); let i = index"
+          [class.active]="currentPage === i + 1"
+          (click)="changePage(i + 1)"
+        >
+          {{ i + 1 }}
+        </span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">→</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+  
+
+
+  

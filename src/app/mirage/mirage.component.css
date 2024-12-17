@@ -1,0 +1,601 @@
+.slid {
+    background-image: url(https://image.api.playstation.com/vulcan/ap/rnd/202208/1718/1YHRDsi3voapHSwJfDMneZXV.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.slid_img {
+    width: 28%;
+}
+
+.slid_img_ii {
+    width: 30%;
+    margin-top: 20px;
+}
+
+.slidb {
+    width: 100%;
+}
+
+.slidm {
+    width: 100%;
+}
+
+.slidn {
+    width: 400px;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.slid_one {
+    color: white;
+    margin-top: 20px;
+}
+
+.slid_in {
+    margin: 140px;
+}
+
+.slid_btn {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.slid_btn:hover {
+    color: #000000;
+    background-color: #fff;
+}
+
+.slid_uder {
+    color: white;
+    margin: 10px;
+}
+
+h3 {
+    color: white;
+    margin: 10px;
+}
+
+.jsdfasf {
+    color: #00000000;
+}
+
+.two {
+    background-image: url(https://images5.alphacoders.com/134/1340408.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.twoh1 {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.jsdgas {
+    color: #00000000;
+}
+
+.twys {
+    margin-top: 20px;
+}
+
+.twop {
+    display: grid;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.first {
+    justify-content: center;
+    margin: 60px;
+    background-color: #000000;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    border-radius: 22px;
+}
+
+.fu {
+    color: #00000000;
+    font-size: 40px;
+}
+
+.first_img {
+    width: 100%;
+    border-radius: 22px;
+}
+
+.firsth2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin: 20px;
+}
+
+.firstp {
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: white;
+    margin: 20px;
+}
+
+.all {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.firstbtn,
+.firstbtn_two,
+.firstbtn_three {
+    margin: 20px;
+    background-color: rgba(245, 245, 220, 0);
+    color: white;
+    border: 0px;
+    transition: all .5s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.firstbtn_three:hover {
+    color: #654607;
+}
+
+.firstbtn:hover {
+    color: #654607;
+}
+
+.firstbtn_two:hover {
+    color: #654607;
+}
+
+.firstbtn_two {
+    margin: 20px;
+}
+
+.firstbtn_three {
+    margin: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f5f5f5;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background: #000;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.poster {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.poster::before {
+    content: '';
+    position: absolute;
+    bottom: -45%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: .3s;
+}
+
+.card:hover .poster::before {
+    bottom: 0;
+}
+
+.poster img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.card:hover .poster img {
+    transform: scale(1.1);
+}
+
+.details {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 1.5em 1.5em 2em;
+    background: #000a;
+    backdrop-filter: blur(16px) saturate(120%);
+    transition: .3s;
+    color: #fff;
+    z-index: 2;
+}
+
+.card:hover .details {
+    bottom: 0;
+}
+
+.details h1,
+.details h2 {
+    font-weight: 700;
+}
+
+.details h1 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.details h2 {
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 10px;
+    opacity: .6;
+}
+
+.details .rating {
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    gap: .25em;
+}
+
+.details .rating i {
+    color: #e3c414;
+}
+
+.details .rating span {
+    margin-left: 0.25em;
+}
+
+.details .tags {
+    display: flex;
+    gap: .375em;
+    margin-bottom: .875em;
+    font-size: .85em;
+}
+
+.details .tags span {
+    padding: .35rem .65rem;
+    color: #fff;
+    border: 1.5px solid rgba(255 255 255 / 0.4);
+    border-radius: 4px;
+    border-radius: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.details .desc {
+    color: #fff;
+    opacity: .8;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.details .cast h3 {
+    margin-bottom: .5em;
+}
+
+.details .cast ul {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    width: 100%;
+}
+
+.details .cast ul li {
+    list-style: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5px solid #fff;
+}
+
+.details .cast ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.news_card {
+    background-image: url(https://preview.redd.it/assassins-creed-mirage-hd-wallpapers-v0-8zowjlukq52b1.jpg?width=3348&format=pjpg&auto=webp&s=87169380b10004369610d472320ece0f07cf2bae);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.news_date {
+    color: white;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.news_text {
+    color: white;
+    margin-top: 10px;
+    font-size: 22px;
+    margin: 20px;
+}
+
+.news_btn {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.news_btn:hover {
+    color: #000000;
+    background-color: #fff;
+}
+
+.news_card_one {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin: 80px;
+}
+
+.news_img {
+    width: 100%;
+}
+
+.news_foot {
+    background-color: rgb(36, 35, 35);
+    color: #fff;
+    width: 180px;
+    margin-top: 10px;
+    margin: 20px;
+}
+
+.news_card_one_row {
+    background-color: rgb(53, 51, 51);
+    border-radius: 22px;
+}
+
+.news_text_two {
+    color: white;
+    margin: 20px;
+}
+
+.news_last {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+}
+
+.news_last:hover {
+    color: #000000;
+    background-color: #fff;
+}
+
+.btn_nws {
+    display: flex;
+    justify-content: center;
+}
+
+.mine_h_w {
+    color: #ffffff;
+    text-align: center;
+    font-size: 48px;
+}
+
+.lll {
+    background-image: url(https://wallpapercave.com/wp/wp12300537.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.dsr {
+    color: white;
+    text-align: center;
+    font-size: 48px;
+}
+
+/* Media Queries */
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+    .slid_img, .slid_img_ii {
+        width: 100%; /* Stack images */
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .slid_btn, .firstbtn, .firstbtn_two, .firstbtn_three {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .news_text {
+        font-size: 18px;
+    }
+
+    .all {
+        grid-template-columns: 1fr; /* Stack cards */
+    }
+
+    .wrapper {
+        padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .all {
+      display: none;
+    }
+    .news_card_one {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+/* Small Devices (Landscape Phones) */
+@media (max-width: 767px) {
+    .slid_img, .slid_img_ii {
+        width: 45%; /* Two images side by side */
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .slid_btn, .firstbtn, .firstbtn_two, .firstbtn_three {
+        font-size: 15px;
+    }
+
+    .news_text {
+        font-size: 20px;
+    }
+
+    .all {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    .slid_img, .slid_img_ii {
+        width: 40%; /* Adjust image width */
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .slid_btn, .firstbtn, .firstbtn_two, .firstbtn_three {
+        font-size: 16px;
+    }
+
+    .news_text {
+        font-size: 22px;
+    }
+
+    .all {
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1025px) {
+    .all {
+        grid-template-columns: repeat(3, 1fr); /* Maintain three columns */
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .slid_btn, .firstbtn, .firstbtn_two, .firstbtn_three {
+        font-size: 17px;
+    }
+
+    .news_text {
+        font-size: 22px;
+    }
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 2048px) {
+    .card {
+        width: 400px; /* Increase card size */
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .slid_btn, .firstbtn, .firstbtn_two, .firstbtn_three {
+        font-size: 18px;
+    }
+
+    .news_text {
+        font-size: 24px;
+    }
+}

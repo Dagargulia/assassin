@@ -1,0 +1,90 @@
+
+
+<div class="top">
+    <h2 class="toph">.</h2>
+    <div class="topp">
+        <h2 class="topph">Discover Assassin's Creed Franchise</h2>
+        <p class="topp_p">Dive into a rich tapestry of historical narratives, <br> thrilling gameplay, and intricate characters. From ancient Egypt to the <br> bustling streets of Renaissance Italy, experience <br> the blend of history and fiction that has captivated <br> millions. Uncover the secrets of the Assassins and Templars, explore vast open worlds, and engage in stealthy <br> combat. Whether you're a newcomer or a long-time fan, the <br> Assassin's Creed universe invites you to embark <br> on an epic journey through time.</p>
+         
+    </div>
+</div>
+<section class="lkjhg">
+  
+  <h6>.</h6>
+<div *ngIf="selectedGames.size > 0" class="add-selected-btn">
+  <button (click)="addSelectedToBasket()">Add Selected Games to Basket</button>
+</div>
+<h6>.</h6>
+</section>
+
+    <div class="mhj"><!-- Search Input Field -->
+    <input
+      type="text"
+      placeholder="Search games..."
+      [(ngModel)]="searchText"
+      (input)="onSearch()"
+      class="search-bar"
+    />
+</div>
+<section class="mockapi_list">
+  <div *ngFor="let game of filteredGames" class="mockapi_list_games">
+    <img [src]="game.coverimg" alt="" class="mockapi_list_img" />
+    <h1>{{ game.Name }}</h1>
+      <div class="price">{{ game.price}}</div>
+   
+    
+    <div class="checkbox-container">
+      <input 
+        type="checkbox" 
+        [id]="'checkbox_' + game.id"
+        (change)="toggleSelection(game.id)" 
+        [checked]="selectedGames.has(game.id)" />
+      <label [for]="'checkbox_' + game.id">Select</label>
+    </div>
+    
+    <div class="btns">
+      <button (click)="addToBasket(game)" class="mockapi_list_games_btn_A">{{ game.buttonA }}</button>
+    </div>
+  </div>
+
+  <!-- Button to add all selected games to the basket -->
+   <section class="dsdsf">
+    <h6>.</h6>
+  <div *ngIf="selectedGames.size > 0" class="add-selected-btn">
+    <button (click)="addSelectedToBasket()">Add Selected Games to Basket</button>
+  </div>
+  <h6>.</h6>
+</section>
+<h6>.</h6>
+</section>
+
+
+
+  
+<main class="questionari">
+<div class="faq-section">
+  <h1 class="faq-title">Discovery Tour - Frequently Asked Questions</h1>
+  <div class="faq-item">
+      <h2 class="faq-question">What is the Discovery Tour?</h2>
+      <p class="faq-answer">The Discovery Tour is an educational game mode by Ubisoft that transforms Assassin’s Creed's historical settings into interactive learning experiences. It allows players to explore history without combat, following guided tours and learning through interactive content.</p>
+  </div>
+  <div class="faq-item">
+      <h2 class="faq-question">Did Ubisoft work with historians and experts for the Discovery Tour?</h2>
+      <p class="faq-answer">Yes, Ubisoft collaborated with historians, archaeologists, and academic experts to ensure historical accuracy and provide an authentic learning experience in the Discovery Tour.</p>
+  </div>
+  <div class="faq-item">
+      <h2 class="faq-question">Do I need to own/play the corresponding Assassin’s Creed games to access the Discovery Tour?</h2>
+      <p class="faq-answer">No, the Discovery Tour is available as a standalone title on PC and other select platforms. You do not need the main Assassin's Creed game to access it.</p>
+  </div>
+  <div class="faq-item">
+      <h2 class="faq-question">In what languages is the Discovery Tour available?</h2>
+      <p class="faq-answer">Discovery Tour supports multiple languages, including English, French, German, Spanish, Italian, Russian, and Japanese. Available languages may vary based on the version and platform.</p>
+  </div>
+  <div class="faq-item">
+      <h2 class="faq-question">What are the PC specs to run the Discovery Tour?</h2>
+      <p class="faq-answer">The PC specs vary by version. Generally, an Intel Core i5-2400 or AMD FX-4320, 8GB RAM, and an NVIDIA GTX 660 or AMD R9 270 are required for the minimum experience. Recommended specs may vary.</p>
+  </div>
+
+</div>
+
+</main>

@@ -1,0 +1,233 @@
+header {
+    background-image: url(https://images4.alphacoders.com/842/thumb-1920-842999.jpg);
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    color: rgba(240, 248, 255, 0);
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    margin-top: 60px;
+    font-size: 48px;
+}
+
+.headet2 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerp {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 24px;
+}
+
+h6 {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.footas {
+    background-image: url(https://scontent.ftbs6-2.fna.fbcdn.net/v/t39.30808-6/464102945_8419446861437601_7875108161088300009_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=aTWKpi6AREgQ7kNvgFoodoM&_nc_zt=23&_nc_ht=scontent.ftbs6-2.fna&_nc_gid=A4Yhye7R-oEEQOHWORXgBAj&oh=00_AYD9eise05n61z3jvIhZDqyusqu5PkWHvOSfjLgFqwuQ3A&oe=671D5435);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.news_card {
+    background-image: url(https://images.hdqwalls.com/wallpapers/assassins-creed-syndicate-logo-dark-4k-ax.jpg);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.news_date {
+    color: white;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.news_text {
+    color: white;
+    margin-top: 10px;
+    font-size: 22px;
+    margin: 20px;
+}
+
+.news_btn {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.news_btn:hover {
+    color: #000000;
+    background-color: #fff;
+}
+
+.news_card_one {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin: 80px;
+}
+
+.news_img {
+    width: 100%;
+}
+
+.news_foot {
+    background-color: rgb(36, 35, 35);
+    color: #fff;
+    width: 180px;
+    margin-top: 10px;
+    margin: 20px;
+}
+
+.news_card_one_row {
+    background-color: rgb(53, 51, 51);
+    border-radius: 22px;
+}
+
+.news_text_two {
+    color: white;
+    margin: 20px;
+}
+
+.news_last {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+}
+
+.news_last:hover {
+    color: #000000;
+    background-color: #fff;
+}
+
+/* Media Queries */
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+    header {
+        height: 30vh;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .headerp {
+        font-size: 16px;
+    }
+
+    .news_text {
+        font-size: 18px;
+    }
+
+    .news_btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .news_card_one {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+
+    h6 {
+        font-size: 16px;
+    }
+}
+
+/* Small Devices (Landscape Phones) */
+@media (max-width: 767px) {
+    header {
+        height: 35vh;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .news_card_one {
+        grid-template-columns: 1fr 1fr;
+        margin: 40px;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    header {
+        height: 40vh;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .news_card_one {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 60px;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1025px) {
+    header {
+        height: 40vh;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    .news_card_one {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 2048px) {
+    header {
+        height: 50vh;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+}
+
+
+

@@ -1,0 +1,167 @@
+body {
+    background-image: url(https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/05/ubisoft-games-star-wars-outlaws-assassins-creed-shadows.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+
+.last {
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    margin: 60px;
+}
+
+h2 {
+    color: white;
+    margin: 60px;
+}
+
+button {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    margin: 60px;
+}
+
+button:hover {
+    color: #000000;
+    background-color: #fff;
+}
+
+/* Media Queries */
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        margin: 20px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    h2 {
+        margin: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+        margin: 10px;
+    }
+}
+
+/* Small Devices (Landscape Phones) */
+@media (max-width: 767px) {
+    h1 {
+        margin: 30px;
+        font-size: 28px;
+    }
+
+    h2 {
+        margin: 30px;
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    h1 {
+        margin: 40px;
+        font-size: 32px;
+    }
+
+    h2 {
+        margin: 40px;
+        font-size: 28px;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1025px) {
+    h1 {
+        margin: 60px;
+        font-size: 36px;
+    }
+
+    h2 {
+        margin: 60px;
+        font-size: 32px;
+    }
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 2048px) {
+    h1 {
+        margin: 80px;
+        font-size: 48px;
+    }
+
+    h2 {
+        margin: 80px;
+        font-size: 36px;
+    }
+}
+.download-alert {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Ensure it's on top of other elements */
+    animation: fadeIn 0.5s ease-in-out; /* Fade in effect */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+  }
+  

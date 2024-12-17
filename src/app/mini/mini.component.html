@@ -1,0 +1,19 @@
+<section>
+<div class="game-container">
+    <div class="scoreboard">Score: {{ score }}</div>
+    <div class="high-score">High Score: {{ highScore }}</div>
+    <div class="health">Health: {{ player.health }}</div>
+    <div class="time-left">Time Left: {{ timeLeft }}s</div>
+  
+    <div class="player" [style.left.px]="player.x" [style.top.px]="player.y"></div>
+  
+    <div *ngFor="let enemy of enemies" class="enemy-container">
+      <div *ngIf="enemy.alive" class="enemy" [style.left.px]="enemy.x" [style.top.px]="enemy.y"></div>
+    </div>
+  
+    <div *ngIf="gameOver" class="game-over-message">
+      {{ player.health > 0 ? 'Congratulations! You won!' : 'Game Over! You lose!' }}
+    </div>
+    <button (click)="restartGame()" class="restart-btn">Restart Game</button>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+<header class="headermine">
+  <div class="logomine">
+    <a href="http://localhost:4200/journey">
+      <img src="https://files.oaiusercontent.com/file-5SzfQgxPVJaSQ7UPrhLKHy?se=2024-11-28T10%3A57%3A34Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D93892f4d-1c03-4867-871e-9d27d9ce2ac8.webp&sig=NroO%2B5Q7W0wpHdFWg1TeO2vIEeGQZWp7VY2/VIyVtWM%3D" alt="" class="logo_img">      </a>
+  </div>
+  <button class="burger-menu" (click)="toggleMenu()">
+    <!-- Hamburger icon -->
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="navmine" [class.open]="menuOpen">
+      <ul>
+          <li><a href="http://localhost:4200/journey" routerLink="journey">Home</a></li>
+          <li><a href="http://localhost:4200/tikets" routerLink="tikets">Ticket</a></li>
+          <li><a href="http://localhost:4200/friend" routerLink="friend">Support</a></li>
+          <li><a href="http://localhost:4200/mytickets" routerLink="mytickets">My Tickets</a></li>
+        </ul>
+  </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ticket-list">
+  <h2>Your Tickets</h2>
+
+  <!-- Display a message if there are no tickets -->
+  <div *ngIf="myTickets.length === 0" class="no-tickets">
+    <p>No tickets found. Please purchase tickets first.</p>
+  </div>
+
+  <!-- Display the tickets if there are any -->
+  <div *ngFor="let ticket of myTickets" class="ticket">
+    <img [src]="ticket.imageUrl" [alt]="ticket.location" class="ticket-image">
+    <h3>{{ ticket.location }}</h3>
+    <p><strong>Transport:</strong> {{ ticket.transport }}</p>
+    <p><strong>Seat:</strong> {{ ticket.seat }}</p>
+    <p><strong>Description:</strong> {{ ticket.description }}</p>
+    <p><strong>Information:</strong> {{ ticket.information }}</p>
+    <hr />
+  </div>
+</div>

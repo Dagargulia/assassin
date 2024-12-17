@@ -1,0 +1,180 @@
+
+<!-- hhhhhhhhhhhhhhhhhhheeeeeeeeeeeeeeeeeeaaaaaaaaaaaaaaaaadddddddddddddddddeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrr -->
+
+<div class="tour-section">
+    <h2 class="section-title">Upcoming Performances</h2>
+  
+    <!-- Filter Section -->
+    <div class="filter-section">
+      <div class="filter-group">
+        <label for="date-filter">Filter by Date:</label>
+        <input
+          id="date-filter"
+          type="date"
+          [(ngModel)]="selectedDate"
+          (change)="filterEvents()"
+        />
+      </div>
+      <div class="filter-group">
+        <label for="time-filter">Filter by Time:</label>
+        <input
+          id="time-filter"
+          type="time"
+          [(ngModel)]="selectedTime"
+          (change)="filterEvents()"
+        />
+      </div>
+      <button class="reset-btn" (click)="resetFilter()">Reset Filter</button>
+    </div>
+  
+    <!-- Event List -->
+    <div class="event-list">
+      <div class="event-card" *ngFor="let event of filteredEvents">
+        <img [src]="event.img" alt="Event Image" class="event-image" />
+        <div class="event-date">
+          <h3>{{ event.day }}</h3>
+          <p>{{ event.month }}</p>
+          <span>{{ event.year }}</span>
+        </div>
+        <div class="event-details">
+          <h3>{{ event.location }}</h3>
+          <p>{{ event.venue }}</p>
+          <p>{{ event.time }}</p>
+          <p>{{ event.presenter }}</p>
+        </div>
+        <div class="event-buttons">
+          <button class="details-btn" (click)="showDetails(event)">Tickets</button>
+          
+        </div>
+      </div>
+    </div>
+    <div class="load-more-container" *ngIf="filteredEvents.length < events.length">
+      <button class="load-more-btn" (click)="loadMore()">Load More</button>
+    </div>
+  
+    <!-- Details Popup -->
+    <!-- Cinema Seats Section -->
+     <section class="daga_cinema">
+    <div class="details-alert" *ngIf="selectedEvent">
+        <div class="alert-content">
+          <button class="close-btn" (click)="closeDetails()">×</button>
+          <div class="information_this">
+            <img [src]="selectedEvent.img" alt="Event Image" class="alert-image" />
+
+          <h3>{{ selectedEvent.location }}</h3>
+          <p>{{ selectedEvent.venue }}</p>
+          <p>{{ selectedEvent.time }}</p>
+          <p>{{ selectedEvent.presenter }}</p>
+        </div>
+      
+          <!-- Seats Section -->
+          <div class="seat-grid">
+            
+            <div
+              class="seat"
+              *ngFor="let seat of availableSeats"
+              [class.selected]="seat.selected"
+              [class.vip]="seat.isVip"
+              (click)="toggleSeatSelection(seat)"
+            >
+              {{ seat.row }}-{{ seat.col }}
+              <span class="price">${{ seat.price }}</span>
+            </div>
+          </div>
+          
+      
+          <button class="submit-btn" (click)="submitSelection()">Submit</button>
+        </div>
+      </div>
+    </section>
+      <!-- Custom Alert -->
+      <div *ngIf="isAlertVisible" class="custom-alerttt">
+        <div class="alert-contenttt">
+          <h2>Ticket Details</h2>
+          <p><strong>Event:</strong> {{ ticketDetails.event.month }} {{ ticketDetails.event.day }}, {{ ticketDetails.event.year }} - {{ ticketDetails.event.location }}</p>
+          <p><strong>Venue:</strong> {{ ticketDetails.event.venue }}</p>
+          <p><strong>Seats:</strong></p>
+          <ul>
+            <li *ngFor="let seat of ticketDetails.seats">
+              Row {{ seat.row }} Seat {{ seat.col }} - ${{ seat.price }}
+            </li>
+          </ul>
+          <p><strong>Total Price:</strong> ${{ ticketDetails.totalPrice }}</p>
+          <button class="close-btn" (click)="isAlertVisible = false">Close</button>
+        </div>
+      </div>
+      
+  
+  
+
+
+<!-- ffffffffffffffffffffffffooooooooooooooooooooooooooooootttttttttttttttttttttteeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrr -->
+
+<section class="helpfooter">
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Left Column: First Video -->
+        <div class="footer-video">
+            <h3>World Premiere</h3>
+            <p>Aftermovie</p>
+            <div class="video-container">
+                <iframe 
+                    width="300" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/hQUpJrFG5JY" 
+                    title="Assassin's Creed World Premiere"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Center Column: Logo and Social Media -->
+        <div class="footer-logo">
+            <img src="https://assassinscreedsymphonicadventure.com/wp-content/uploads/2021/12/upaop-768x977.png" alt="Assassin's Creed Logo">
+            <h2>Assassin's Creed Symphonic Adventure</h2>
+            <p>The Immersive Concert</p>
+            <div class="social-icons">
+                <a href="#"><svg width="64px" height="64px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Facebook-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-200.000000, -160.000000)" fill="#4460A0"> <path d="M225.638355,208 L202.649232,208 C201.185673,208 200,206.813592 200,205.350603 L200,162.649211 C200,161.18585 201.185859,160 202.649232,160 L245.350955,160 C246.813955,160 248,161.18585 248,162.649211 L248,205.350603 C248,206.813778 246.813769,208 245.350955,208 L233.119305,208 L233.119305,189.411755 L239.358521,189.411755 L240.292755,182.167586 L233.119305,182.167586 L233.119305,177.542641 C233.119305,175.445287 233.701712,174.01601 236.70929,174.01601 L240.545311,174.014333 L240.545311,167.535091 C239.881886,167.446808 237.604784,167.24957 234.955552,167.24957 C229.424834,167.24957 225.638355,170.625526 225.638355,176.825209 L225.638355,182.167586 L219.383122,182.167586 L219.383122,189.411755 L225.638355,189.411755 L225.638355,208 L225.638355,208 Z" id="Facebook"> </path> </g> </g> </g></svg></a>
+                <a href="#"><svg width="64px" height="64px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="24" cy="24" r="20" fill="#1DA1F2"></circle> <path fill-rule="evenodd" clip-rule="evenodd" d="M36 16.3086C35.1177 16.7006 34.1681 16.9646 33.1722 17.0838C34.1889 16.4742 34.9697 15.5095 35.3368 14.36C34.3865 14.9247 33.3314 15.3335 32.2107 15.5551C31.3123 14.5984 30.0316 14 28.6165 14C25.8975 14 23.6928 16.2047 23.6928 18.9237C23.6928 19.3092 23.7368 19.6852 23.8208 20.046C19.7283 19.8412 16.1005 17.8805 13.6719 14.9015C13.2479 15.6287 13.0055 16.4742 13.0055 17.3766C13.0055 19.0845 13.8735 20.5916 15.1958 21.4747C14.3878 21.4491 13.6295 21.2275 12.9647 20.8587V20.9203C12.9647 23.3066 14.663 25.296 16.9141 25.7496C16.5013 25.8616 16.0661 25.9224 15.6174 25.9224C15.2998 25.9224 14.991 25.8912 14.6902 25.8336C15.3166 27.7895 17.1357 29.2134 19.2899 29.2534C17.6052 30.5733 15.4822 31.3612 13.1751 31.3612C12.7767 31.3612 12.3848 31.338 12 31.2916C14.1791 32.6884 16.7669 33.5043 19.5475 33.5043C28.6037 33.5043 33.5562 26.0016 33.5562 19.4956C33.5562 19.282 33.5522 19.0693 33.5418 18.8589C34.5049 18.1629 35.34 17.2958 36 16.3086Z" fill="white"></path> </g></svg></a>
+                <a href="#"><svg width="64px" height="64px" viewBox="0 -7 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Youtube-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-200.000000, -368.000000)" fill="#CE1312"> <path d="M219.044,391.269916 L219.0425,377.687742 L232.0115,384.502244 L219.044,391.269916 Z M247.52,375.334163 C247.52,375.334163 247.0505,372.003199 245.612,370.536366 C243.7865,368.610299 241.7405,368.601235 240.803,368.489448 C234.086,368 224.0105,368 224.0105,368 L223.9895,368 C223.9895,368 213.914,368 207.197,368.489448 C206.258,368.601235 204.2135,368.610299 202.3865,370.536366 C200.948,372.003199 200.48,375.334163 200.48,375.334163 C200.48,375.334163 200,379.246723 200,383.157773 L200,386.82561 C200,390.73817 200.48,394.64922 200.48,394.64922 C200.48,394.64922 200.948,397.980184 202.3865,399.447016 C204.2135,401.373084 206.612,401.312658 207.68,401.513574 C211.52,401.885191 224,402 224,402 C224,402 234.086,401.984894 240.803,401.495446 C241.7405,401.382148 243.7865,401.373084 245.612,399.447016 C247.0505,397.980184 247.52,394.64922 247.52,394.64922 C247.52,394.64922 248,390.73817 248,386.82561 L248,383.157773 C248,379.246723 247.52,375.334163 247.52,375.334163 L247.52,375.334163 Z" id="Youtube"> </path> </g> </g> </g></svg></a>
+                <a href="#"><svg width="64px" height="64px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint0_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint1_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint2_radial_87_7153)"></rect> <path d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z" fill="white"></path> <defs> <radialGradient id="paint0_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)"> <stop stop-color="#B13589"></stop> <stop offset="0.79309" stop-color="#C62F94"></stop> <stop offset="1" stop-color="#8A3AC8"></stop> </radialGradient> <radialGradient id="paint1_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)"> <stop stop-color="#E0E8B7"></stop> <stop offset="0.444662" stop-color="#FB8A2E"></stop> <stop offset="0.71474" stop-color="#E2425C"></stop> <stop offset="1" stop-color="#E2425C" stop-opacity="0"></stop> </radialGradient> <radialGradient id="paint2_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)"> <stop offset="0.156701" stop-color="#406ADC"></stop> <stop offset="0.467799" stop-color="#6A45BE"></stop> <stop offset="1" stop-color="#6A45BE" stop-opacity="0"></stop> </radialGradient> </defs> </g></svg></a>
+            </div>
+        </div>
+
+        <!-- Right Column: Second Video -->
+        <div class="footer-video">
+            <h3>Jesper Kyd</h3>
+            <p>Composer</p>
+            <div class="video-container">
+                <iframe 
+                    width="300" 
+                    height="200" 
+                    src="https://www.youtube.com/embed/hJgJ57GVJv8" 
+                    title="Jesper Kyd Greetings"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <p>Ubisoft Presents · Assassin's Creed Symphonic Adventure · An Overlook Events Original Production</p>
+        <p>© 2024 Ubisoft Entertainment.</p>
+        <p>
+            All rights reserved. Assassin’s Creed, Ubisoft, and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the U.S. and/or other countries.
+        </p>
+        <ul>
+            <li><a href="#">Privacy & Legal</a></li>
+            <li><a href="#">Internet-based Ads</a></li>
+            <li><a href="#">Do Not Sell My Personal Information</a></li>
+        </ul>
+    </div>
+</footer>
+</section>

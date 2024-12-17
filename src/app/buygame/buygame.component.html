@@ -1,0 +1,104 @@
+<section class="dsa">
+  <section class="fff">
+    <h6>Add Your Card to Buy Game</h6>
+    <form (ngSubmit)="addCard()" #cardForm="ngForm">
+      <!-- Close icon -->
+      <i class="fa fa-times-circle" (click)="closeForm()"></i>
+
+      <!-- Card Number Input -->
+      <input
+        type="text"
+        placeholder="Enter card number"
+        [(ngModel)]="number"
+        name="cardNumber"
+        required
+        class="number"
+      />
+
+      <!-- Card Holder Name Input -->
+      <input
+        type="text"
+        placeholder="Enter your name"
+        [(ngModel)]="name"
+        name="cardHolder"
+        required
+        class="name"
+      />
+
+      <!-- Expiry Date Input -->
+      <input
+        type="text"
+        placeholder="MM / YY"
+        [(ngModel)]="expiry"
+        name="expiryDate"
+        required
+        class="expiry"
+      />
+
+      <!-- Card Type Selection -->
+      <div class="choose_a_card">
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/mastercard-curved-64px.png"
+          (click)="chooseCardType('mastercard-curved-64px')"
+          alt="MasterCard"
+        />
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/discover-curved-64px.png"
+          (click)="chooseCardType('discover-curved-64px')"
+          alt="Discover"
+        />
+        <img
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/visa-curved-64px.png"
+          (click)="chooseCardType('visa-curved-64px')"
+          class="selected"
+          alt="Visa"
+        />
+      </div>
+
+      <!-- Display Card Preview -->
+      <div class="card">
+        <div class="card_number">
+          <p>{{ number }}</p>
+        </div>
+        <div class="card_holder">
+          <p>{{ name }}</p>
+          <p>{{ expiry }}</p>
+        </div>
+       
+      </div>
+
+      <div class="btnkl">
+        <button type="submit">Add Card</button>
+
+        <button type="button" (click)="buyGame()">Buy Now</button>
+      </div>
+    </form>
+
+    <div *ngIf="showError" class="error-message">
+      <p class="error-text">Please fill all fields and select a card type before proceeding.</p>
+    </div>
+
+    <h6>Your Added Cards:</h6>
+    <ul>
+      <li *ngFor="let card of cards">
+        <div class="card-preview">
+          <img [src]="'https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/' + card.type + '.png'" alt="Card Icon"/>
+          <p>{{ card.cardNumber }} - {{ card.cardHolder }} ({{ card.expiryDate }})</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <div class="custom-alert" *ngIf="showAlert">
+    <div class="alert-content">
+      <p class="alerp">Congratulations! You've successfully bought the game. Get ready for an amazing adventure!</p>
+      <br><br><br>
+      <p class="aler">
+        <svg width="64px" height="64px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path class="st0" d="M256,43.5C138.64,43.5,43.5,138.64,43.5,256S138.64,468.5,256,468.5S468.5,373.36,468.5,256 S373.36,43.5,256,43.5z M378.81,222.92L249.88,351.86c-7.95,7.95-18.52,12.33-29.76,12.33s-21.81-4.38-29.76-12.33l-57.17-57.17 c-8.3-8.3-12.87-19.35-12.87-31.11s4.57-22.81,12.87-31.11c8.31-8.31,19.36-12.89,31.11-12.89s22.8,4.58,31.11,12.89l24.71,24.7 l96.47-96.47c8.31-8.31,19.36-12.89,31.11-12.89c11.75,0,22.8,4.58,31.11,12.89c8.3,8.3,12.87,19.35,12.87,31.11 S387.11,214.62,378.81,222.92z"></path>
+        </svg>
+      </p>
+      <button class="close-btn" (click)="closeAlert()">Close</button>
+    </div>
+  </div>
+</section>

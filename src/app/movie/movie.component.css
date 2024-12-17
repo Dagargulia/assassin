@@ -1,0 +1,136 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Movie Section */
+.movie {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+   
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 2px;
+}
+
+.movies_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    margin-top: 30px;
+    margin: 80px;
+
+}
+
+.list {
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.list:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.movie_img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #ffffff;
+    transition: all 0.3s ease;
+}
+
+.list:hover .movie_img {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 15px 0;
+    font-family: 'Verdana', sans-serif;
+}
+
+.title {
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    padding: 15px;
+    text-align: left;
+    line-height: 1.4;
+}
+
+/* Hover effects */
+.list:hover .title {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .movies_list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+/* Button Styling */
+.list_btn {
+    background-color: #ffffff; /* Orange color */
+    color: #030000; /* White text */
+    padding: 12px 25px;
+    border-radius: 50px; /* Rounded corners for a pill-like shape */
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase; /* Makes text all caps */
+    letter-spacing: 2px; /* Adds space between letters */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* Button Hover Effect */
+.list_btn:hover {
+    background-color: #ffffff; /* Slightly darker orange on hover */
+    transform: scale(1.1); /* Button grows slightly on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Button Focus Effect (when clicked or focused) */
+.list_btn:focus {
+    outline: none; /* Removes the default outline */
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6); /* Adds a glowing effect around the button */
+}
+
+/* Button Active Effect (when clicked) */
+.list_btn:active {
+    transform: scale(1.05); /* Shrinks slightly when pressed */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Returns shadow to normal */
+}

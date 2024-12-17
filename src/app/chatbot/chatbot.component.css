@@ -1,0 +1,234 @@
+/* chatbot.component.css */
+
+/* General container for full-screen chatbot */
+.chatbot-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1f1f1f; /* Dark background */
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  animation: slideIn 0.4s ease-out;
+  z-index: 9999;
+}
+
+/* Header styles */
+.chatbot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #212121; /* Dark gray */
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button */
+.chatbot-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.chatbot-close-btn:hover {
+  color: #ff5c5c; /* Assassin red */
+}
+
+/* Message area */
+.chatbot-messages {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-image: url('https://img.goodfon.com/original/1920x1080/0/bb/assassin-s-creed-iv-black-2375.jpg'); /* Assassin's Creed background */
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Message bubble styles */
+.chatbot-message {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-message {
+  background-color: #007bff; /* Blue for user */
+  color: white;
+  padding: 12px 18px;
+  border-radius: 20px;
+  align-self: flex-end;
+  max-width: 75%;
+  word-wrap: break-word;
+  animation: slideInRight 0.5s ease-out;
+}
+
+.bot-response {
+  background-color: #333; /* Dark background for bot */
+  color: #f1f1f1; /* Light text */
+  padding: 12px 18px;
+  border-radius: 20px;
+  align-self: flex-start;
+  max-width: 75%;
+  word-wrap: break-word;
+  animation: slideInLeft 0.5s ease-out;
+}
+
+/* Quick questions section */
+.chatbot-questions {
+  padding: 20px;
+  background-color: #212121; /* Dark background */
+  border-top: 1px solid #333; /* Dark border */
+  position: relative;
+}
+
+.chatbot-questions h4 {
+  margin-bottom: 10px;
+  color: #007bff; /* Blue text */
+  font-size: 16px;
+}
+
+.chatbot-questions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.chatbot-questions li {
+  cursor: pointer;
+  padding: 10px 15px;
+  color: #007bff;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+}
+
+.chatbot-questions li:hover {
+  background-color: #e9f5ff; /* Light blue */
+  color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Input section */
+.chatbot-input {
+  display: flex;
+  padding: 15px;
+  background-color: #212121; /* Dark background */
+  border-top: 1px solid #333;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-input input {
+  flex-grow: 1;
+  padding: 12px 18px;
+  border: 1px solid #333;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #555; /* Dark input background */
+  transition: border-color 0.3s ease;
+}
+
+.chatbot-input input:focus {
+  border-color: #007bff; /* Focus border */
+  outline: none;
+}
+
+.chatbot-input button {
+  margin-left: 12px;
+  padding: 12px 20px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chatbot-input button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Animations for message appearance */
+@keyframes slideInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-100px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Clear Chat Button */
+.clear-chat-btn {
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #ff5c5c; /* Assassin red */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+}
+
+.clear-chat-btn:hover {
+  background-color: #e63946;
+  transform: scale(1.05);
+}
+
+/* Toggle Button for Suggested Questions (Assassin's Creed Theme) */
+.dsa {
+  background-color: #000000; /* Assassin's Creed gold color */
+  color: #ffffff; /* Dark background color */
+  font-size: 12px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.dsa:hover {
+  background-color: #ff0000; /* Assassin's Creed orange-red for hover effect */
+  transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+.dsa:focus {
+  outline: none; /* Remove focus outline */
+  border: 2px solid #000000; /* Gold border on focus */
+}

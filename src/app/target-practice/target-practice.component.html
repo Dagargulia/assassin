@@ -1,0 +1,19 @@
+<section>
+  <h2>Assassin's Creed: Target Practice</h2>
+  <p>Score: {{ score }}</p>
+  <p>Time Left: {{ timeLeft }}s</p>
+<div class="game-container">
+   
+    
+    <div *ngFor="let target of targets; let i = index">
+      <div *ngIf="target.visible" 
+           class="target" 
+           [style.top.%]="target.y" 
+           [style.left.%]="target.x" 
+           (click)="hitTarget(i)"><h3>🎯</h3>
+         
+       
+      </div>
+    </div>
+  </div>
+</section>

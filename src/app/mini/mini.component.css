@@ -1,0 +1,116 @@
+.game-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: #1c1c1c;
+    border: 3px solid #4d4d4d;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  }
+  
+  .scoreboard, .high-score, .health, .time-left {
+    position: absolute;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  .scoreboard { top: 10px; left: 10px; }
+  .high-score { top: 10px; right: 10px; }
+  .health { bottom: 10px; left: 10px; }
+  .time-left { bottom: 10px; right: 10px; }
+  
+  .player {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #0055ff 0%, #002266 100%);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 85, 255, 0.6);
+    transition: 0.1s;
+  }
+  
+  .enemy {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #ff2222 0%, #770000 100%);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(255, 34, 34, 0.6);
+  }
+  
+  .game-over-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 2rem;
+  font-family: 'Trebuchet MS', sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border: 3px solid #ff4444;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 68, 68, 0.7);
+  text-align: center;
+  visibility: hidden;
+}
+section {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30466003-2bc2-459c-93a5-9fbc6fe012c1/d87ur51-b4e3dc11-e2a4-44cc-b98a-63b44e0d7542.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMwNDY2MDAzLTJiYzItNDU5Yy05M2E1LTlmYmM2ZmUwMTJjMVwvZDg3dXI1MS1iNGUzZGMxMS1lMmE0LTQ0Y2MtYjk4YS02M2I0NGUwZDc1NDIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gV4pBkruqxEIKc-cv2G5Kvk6NbonPnVL3Zy4VvodBRI);
+}
+.healer {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #22ff22 0%, #005500 100%);
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(34, 255, 34, 0.6);
+}
+.restart-btn {
+    background-color: red;
+    color: white;
+    border-radius: 22px;
+    width: 100px;
+}
+
+.alert-message {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid #ff8800;
+  box-shadow: 0px 0px 15px rgba(255, 136, 0, 0.6);
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+}
+
+/* Styles for player ranks and high score alerts */
+.alert-message.rank {
+  border-color: #ffdd44;
+  box-shadow: 0px 0px 15px rgba(255, 221, 68, 0.6);
+}
+
+.alert-message.high-score {
+  border-color: #44ff44;
+  box-shadow: 0px 0px 15px rgba(68, 255, 68, 0.6);
+}
+
+  
